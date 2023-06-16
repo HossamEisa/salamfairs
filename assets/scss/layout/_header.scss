@@ -96,6 +96,9 @@
       border-radius: 20px 20px 20px 20px;
       padding: 0;
       min-width: 100px;
+      .nav-link {
+        color: #4b4f58;
+      }
       > li {
         &:first-child {
           .dropdown-item {
