@@ -97,7 +97,20 @@
       background-color: #fffffffa;
       border-radius: 20px 20px 20px 20px;
       padding: 0;
-      
+      > li {
+        &:first-child {
+          .dropdown-item {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+        }
+        &:last-child {
+          .dropdown-item {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+          }
+        }
+      }
       .dropdown-item {
         font-family: $font-b;
         font-size: calcRem(18);
@@ -106,6 +119,7 @@
         text-decoration: none;
         text-align: center;
         color: #4b4f58;
+
         &:focus,
         &:hover {
           background-color: var(--main-color);
