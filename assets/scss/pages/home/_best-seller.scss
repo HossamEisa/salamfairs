@@ -1,0 +1,56 @@
+.best-seller {
+  padding: 30px 0 15px;
+  @include mq("xl") {
+    padding: 60px 0 15px;
+  }
+  &-title {
+    color: #58595b;
+    line-height: 1.25em;
+    font-size: calcRem(30);
+    font-weight: 600;
+    font-family: $font-b;
+  }
+  p {
+    color: var(--text-color);
+    line-height: 1.5;
+    font-size: calcRem(15);
+  }
+  &-book {
+    position: relative;
+    &-backdrop {
+      background-color: #58595b;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      transform: scale(0.5);
+      transition: 0.5s ease-in-out;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-title {
+        color: var(--white);
+        font-size: calcRem(25);
+        font-weight: 400;
+        margin-top: 4px;
+        font-family: $font-b;
+        margin-bottom: 25px;
+      }
+    }
+    &:hover {
+      .best-seller-book-backdrop {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+  .btn {
+    transition: 0.3s ease-in-out background-image, 0.3s ease-in-out transform, 0.3s ease-in-out background-color;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

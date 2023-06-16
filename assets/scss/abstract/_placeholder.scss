@@ -1,0 +1,31 @@
+%scroll {
+
+  scrollbar-width: thin;
+  scrollbar-color: $font-primary $font-white;
+
+  // /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Track */
+  //   &::-webkit-scrollbar-track {
+  //     border: #f5f8fd 2px solid;
+  //     background-color: #d8d8d8;
+  //     border-radius: 24px;
+  //   }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $font-primary;
+    // border-radius: 50px;
+  }
+
+  //   /* Handle on hover */
+  //   &::-webkit-scrollbar-thumb:hover { 
+  //     background: $brand-color;
+  //   }
+
+}
+

@@ -1,0 +1,22 @@
+.billion-campaign {
+  background-color: var(--med-grey);
+  padding: 20px 0;
+  @include mq('xl') {
+    padding: 40px 0;
+  }
+  &-content {
+    text-align: center;
+    &-title {
+      color: var(--main-color);
+      font-size: calcRem(45);
+      font-family: $font-b;
+      line-height: calcRem(86);
+    }
+    &-text {
+      font-size: calcRem(23);
+      line-height: calcRem(23);
+      color: #54595f;
+      font-weight: 600;
+    }
+  }
+}

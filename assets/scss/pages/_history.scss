@@ -1,0 +1,66 @@
+.grid-masonry {
+  // overflow: hidden;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .grid-item {
+    margin-bottom: calcRem(90);
+    float: left;
+    height: auto;
+    border-radius: 5px;
+    background: url('../../assets/img/card-overlay.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    overflow: hidden;
+    padding: calcRem(30) calcRem(40);
+    width: 100%;
+
+    @include mq('md') {
+      padding: calcRem(50) calcRem(30) calcRem(30);
+      width: calc(50% - 50px);
+    }
+
+    @include mq('xl') {
+      padding: calcRem(90) calcRem(95) calcRem(60);
+      width: calc(50% - 50px);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      height: 5px;
+      background: linear-gradient(to right, #8E614F, $font-secondary);
+      width: 100%;
+      z-index: 0;
+      border: 1px solid #8E614F;
+    }
+
+    &:nth-child(2) {
+      @include mq('md') {
+        margin-top: calcRem(100);
+      }
+    }
+
+    .card-title {
+      color: $font-secondary;
+      font-size: calcRem(42);
+      font-family: $font-m;
+    }
+
+    .card-text {
+      font-size: calcRem(20);
+    }
+  }
+
+}

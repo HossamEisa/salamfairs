@@ -1,0 +1,24 @@
+.breadcrumb {
+    .breadcrumb-item {
+        display: inline-flex;
+        align-items: center;
+
+        a {
+            color: #AAAAAA;
+            transition: 0.3s ease;
+            text-decoration: none;
+            font-size: calcRem(16);
+            font-weight: 500;
+
+            &:hover {
+                color: $font-primary;
+            }
+        }
+
+        &.active {
+            color: #AAAAAA;
+            font-size: calcRem(16);
+            font-weight: 500;
+        }
+    }
+}

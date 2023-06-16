@@ -1,0 +1,40 @@
+// // fonts gona here
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@font-face {
+  font-family: bukra-regular;
+  src: url("../fonts/bukra-regular.ttf");
+}
+@font-face {
+  font-family: bukra-bold;
+  src: url("../fonts/bukra-bold.ttf");
+}
+
+@font-face {
+  font-family: toggleFont("Cairo-Regular", "DINNextLTArabic-Regular");
+  src: toggleFont(
+    url("../fonts/Cairo-Regular.ttf"),
+    url("../fonts/DINNextLTArabic-Regular.ttf")
+  );
+}
+
+@font-face {
+  font-family: toggleFont("Cairo-Bold", "DINNextLTArabic-Bold");
+  src: toggleFont(
+    url("../fonts/Cairo-Bold.ttf"),
+    url("../fonts/DINNextLTArabic-Bold.ttf")
+  );
+}
+
+.font-m {
+  font-family: $font-m;
+}
+.font-sb {
+  font-family: $font-b;
+}
+.font-r {
+  font-family: $font-r;
+}

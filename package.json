@@ -1,0 +1,25 @@
+{
+  "name": "al-madinah-international-university",
+  "version": "1.0.0",
+  "description": "Al-Madinah International University Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/scss:assets/css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fady-elshahat/al-madinah-international-university.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fady-elshahat/al-madinah-international-university/issues"
+  },
+  "homepage": "https://github.com/fady-elshahat/al-madinah-international-university#readme",
+  "devDependencies": {
+    "sass": "^1.54.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1"
+  }
+}

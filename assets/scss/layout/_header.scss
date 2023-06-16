@@ -1,0 +1,576 @@
+.header {
+  position: relative;
+  display: block;
+  background-color: #ccc;
+  z-index: 9;
+  .navbar {
+    background-color: rgba(12, 14, 13, 0.25);
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+
+  .navbar-brand {
+    margin-#{$right}: var(--bs-navbar-brand-margin-end);
+  }
+
+  .header_mid {
+    position: absolute;
+
+    a {
+      text-decoration: none;
+
+      @include mq("lg") {
+        font-size: 13.5px;
+      }
+
+      @include mq("xl") {
+        font-size: calcRem(16);
+      }
+    }
+
+    @include mq("lg") {
+      .navigation {
+        > .menu-item-has-children {
+          > a {
+            position: relative;
+
+            &::after {
+              content: "\f107";
+              display: inline-block;
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              margin-#{$left}: 5px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sub-menu {
+    padding-#{$left}: 0;
+
+    a {
+      text-decoration: none;
+
+      @include mq("lg") {
+        font-size: 14px;
+      }
+
+      @include mq("xl") {
+        font-size: calcRem(15);
+      }
+    }
+
+    @include mq("lg") {
+      border: 1px solid rgba(112, 112, 112, 0.1);
+    }
+
+    a {
+      color: #000;
+      transition: 0.3s ease-in-out, font 0.3s ease-in-out;
+
+      &:hover {
+        color: $dark-blue;
+        font-family: $font-m, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+      }
+    }
+
+    li {
+      border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+      padding-#{$left}: 15px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @include mq("lg") {
+      border-radius: 10px;
+      border-top-#{$left}-radius: 0;
+
+      &::before {
+        content: "";
+        width: 80px;
+        background-color: #fd0;
+        height: 11px;
+        position: absolute;
+        top: -10px;
+        #{$left}: -1px;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+
+  /***************** Elements ******************/
+  /* Cmsmasters Moving Bar */
+  .cmsmasters_mov_bar {
+    position: absolute !important;
+    height: 3px !important;
+    top: auto;
+    bottom: -10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    max-width: 100%;
+
+    @include mq("lg") {
+      display: block;
+    }
+
+    span {
+      height: 3px;
+      margin: 0 13px;
+      display: block;
+      position: relative;
+      border-radius: 100px;
+    }
+  }
+
+}
+
+/***************** Header Mid Navigation ******************/
+
+.navigation > li span {
+  position: relative;
+}
+
+/* Start Navigation Title Link Current Color */
+
+.navigation .cmsmasters_mov_bar span {
+  background-color: #ffffff;
+}
+
+.navigation > li > a {
+  padding: 16px 8px;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+
+  @include mq("lg") {
+    padding: 12px 0px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 12px 3px;
+  }
+
+  @include mq("xl") {
+    padding: 16px 5px;
+  }
+
+  @include mq("xxl") {
+    padding: 16px 8px;
+  }
+
+  @media screen and (min-width: 1700px) {
+    padding: 12px 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .cmsmasters_responsive_width {
+    width: 1025px;
+  }
+
+  .navigation > li > ul {
+    li.menu-item-has-children {
+      > a {
+        &::before {
+          content: "";
+          background-image: url("../img/section/icon/Path 52158.svg");
+          background-size: contain;
+          height: 10px;
+          width: 10px;
+          background-repeat: no-repeat;
+          #{$left}: auto;
+          position: absolute;
+          #{$right}: 10px;
+          top: 25px;
+          border: none;
+          transform: rotate(90deg);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      &:hover {
+        > a {
+          &::before {
+            transform: rotate(0);
+            top: 20px;
+
+            @at-root {
+              [dir="rtl"] & {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Max
+@media only screen and (max-width: 991px) {
+  .header .navbar .navbar-toggler[aria-expanded="true"] > i::before {
+    content: "";
+  }
+
+  .navbar-toggler {
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .header .navbar .navbar-collapse {
+    justify-content: end;
+    position: fixed;
+    #{$left}: 0;
+    top: 0;
+    bottom: 0;
+    width: 70%;
+    #{$right}: 0;
+    height: 100%;
+    z-index: 9;
+
+    .navigation {
+      max-height: 100vh;
+      overflow: auto;
+      background-color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+      width: 100%;
+      #{$left}: -100%;
+      position: absolute;
+      height: 100%;
+      transition: 0.3s ease;
+      box-shadow: 1px 1px 15px #ccc;
+      text-align: $left;
+    }
+
+    &.show {
+      .navigation {
+        #{$left}: 0;
+      }
+    }
+  }
+
+  .header nav .menu-item-mega-description-container {
+    padding: 10px 15px;
+  }
+
+  .header .top_line_nav {
+    padding: 5px 0;
+  }
+
+  .header .top_line_nav .nav_item_wrap {
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .header .header_mid .resp_navigation_wrap {
+    display: block;
+  }
+
+  .header .header_bot .bot_nav_wrap {
+    display: block;
+    height: auto;
+    margin: 0;
+    visibility: visible;
+    overflow: hidden;
+    clear: both;
+    opacity: 1;
+  }
+
+  .header .header_bot .bot_nav_wrap nav {
+    display: none;
+  }
+
+  .header .navigation {
+    padding: 10px 0;
+
+    .social-media {
+      position: static;
+
+      .social-item {
+        width: 32px;
+        height: 32px;
+
+        i {
+          font-size: 14px;
+        }
+
+        svg {
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  .header .navigation a:not(.social-item) {
+    padding: 9px 20px 9px 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .navigation .nav_item_wrap {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .header .navigation .nav_title {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .header .navigation .nav_tag {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+    margin: 0 0 0 10px;
+  }
+
+  .header .navigation .nav_subtitle {
+    display: block;
+  }
+
+  .header .navigation .cmsmasters_resp_nav_toggle {
+    &::before {
+      width: 1em;
+      height: 1em;
+      margin: auto !important;
+      position: absolute;
+      #{$left}: 0;
+      #{$right}: 0;
+      top: 0;
+      bottom: 0;
+      transition: 0.3s ease;
+    }
+
+    &.cmsmasters_theme_icon_resp_nav_slide_down:before {
+      content: "\f107";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+    }
+
+    &.cmsmasters_theme_icon_resp_nav_slide_up:before {
+      content: "\f107";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      transform: rotate(180deg);
+      top: 5px;
+    }
+  }
+
+  .header .navigation .menu-item-mega-container {
+    width: 100% !important;
+    #{$left}: auto !important;
+    #{$right}: auto !important;
+  }
+
+  .header .header_mid .resp_navigation_wrap .resp_navigation_outer {
+    text-align: center;
+  }
+
+  .header .header_mid .resp_navigation_wrap .resp_navigation_outer:after {
+    content: none;
+  }
+
+  .header .header_mid .social_wrap .social_wrap_inner {
+    text-align: center;
+  }
+
+  .header .header_mid .slogan_wrap .slogan_wrap_inner {
+    padding: 0;
+    text-align: center;
+  }
+
+  .header .header_mid .slogan_wrap .slogan_wrap_inner:after {
+    content: none;
+  }
+
+  .header .header_mid .slogan_wrap .slogan_wrap_text {
+    text-align: center;
+  }
+
+  .header .header_mid .slogan_wrap .slogan_wrap_text > .cmsmasters_button {
+    margin: 0;
+  }
+
+  .header .header_mid .navigation_wrap {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .header .header_bot .resp_bot_nav_wrap {
+    padding: 15px;
+  }
+}
+
+/*-------------------------------------------------------------------------*/
+/* CSS3 Animations
+        /*-------------------------------------------------------------------------*/
+
+.header .header_mid {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.header div > ul ul,
+.header div > ul div {
+  transition: opacity 0.3s ease-in-out 0.1s, margin-top 0.3s ease-in-out 0.1s,
+    visibility 0.3s ease-in-out 0.1s;
+}
+
+.header div > ul ul ul {
+  -webkit-transition: opacity 0.3s ease-in-out 0.1s,
+    margin-#{$left} 0.3s ease-in-out 0.1s,
+    margin-#{$right} 0.3s ease-in-out 0.1s, visibility 0.3s ease-in-out 0.1s;
+  -moz-transition: opacity 0.3s ease-in-out 0.1s,
+    margin-#{$left} 0.3s ease-in-out 0.1s,
+    margin-#{$right} 0.3s ease-in-out 0.1s, visibility 0.3s ease-in-out 0.1s;
+  -ms-transition: opacity 0.3s ease-in-out 0.1s,
+    margin-#{$left} 0.3s ease-in-out 0.1s,
+    margin-#{$right} 0.3s ease-in-out 0.1s, visibility 0.3s ease-in-out 0.1s;
+  -o-transition: opacity 0.3s ease-in-out 0.1s,
+    margin-#{$left} 0.3s ease-in-out 0.1s,
+    margin-#{$right} 0.3s ease-in-out 0.1s, visibility 0.3s ease-in-out 0.1s;
+  transition: opacity 0.3s ease-in-out 0.1s,
+    margin-#{$left} 0.3s ease-in-out 0.1s,
+    margin-#{$right} 0.3s ease-in-out 0.1s, visibility 0.3s ease-in-out 0.1s;
+}
+
+///////////////////////////////////
+/// Start Menu DropDown
+///////////////////////////
+
+.menu-main-menu-container,
+.menu-main-menu-arabic-container,
+.menu-main-menu-malay-container {
+  > ul {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    position: relative;
+    z-index: 202;
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      z-index: 203;
+
+      &:hover {
+        z-index: 204;
+      }
+
+      li:hover > ul {
+        margin: 0 0 0 2px;
+
+        @include mq("lg") {
+          margin: 20px 0 0 2px;
+        }
+      }
+
+      &:last-child {
+        border-#{$right}-width: 0;
+        border-#{$right}-style: solid;
+      }
+    }
+
+    > li {
+      > a {
+        color: black;
+
+        @include mq("lg") {
+          color: $font-white;
+        }
+      }
+    }
+
+    li:hover > ul {
+      margin: 0;
+      visibility: visible;
+      opacity: 1;
+
+      > ul:before {
+        content: "";
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        #{$left}: 0;
+        top: -16px;
+      }
+    }
+
+    @include mq("lg") {
+      > li {
+        display: inline-block;
+      }
+
+      ul {
+        list-style: none;
+        width: 250px;
+        margin: 25px 0 0;
+        padding: 0;
+        visibility: hidden;
+        position: absolute;
+        #{$left}: 0;
+        top: 100%;
+        z-index: 203;
+        opacity: 0;
+        border-width: 1px;
+        border-style: solid;
+        background-color: $font-white;
+
+        li {
+          padding-block: 0;
+          font-size: 14px;
+          color: #fff;
+          line-height: 1.6;
+          font-weight: 500;
+          padding: 15px 0;
+
+          a {
+            color: #000;
+          }
+        }
+
+        ul {
+          margin: 0 0 0 10px;
+          #{$left}: 100%;
+          top: -16px;
+        }
+
+        &.lang {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////
+/// @end Menu dropdown
+//////////////////////////////////////

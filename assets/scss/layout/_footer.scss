@@ -1,0 +1,107 @@
+.footer {
+  position: relative;
+  background-color: #383938;
+  padding: 8px 0 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url('../../assets/img/footer-bg-logo.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    opacity: 0.11;
+    @include mq("xl") {
+      background-position: center right;
+      background-size: 53% auto;
+    }
+  }
+  > div {
+    position: relative;
+    z-index: 2;
+  }
+  &--copyright {
+    font-size: 12px;
+    color: #ffffffc7;
+    margin: 0;
+  }
+  &--menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mq("md") {
+      justify-content: flex-start;
+    }
+    @include mq("xl") {
+      justify-content: flex-end;
+    }
+
+    li {
+      margin-right: 8px;
+      margin-left: 8px;
+      &::after {
+        content: "";
+        border-color: #ddd;
+        width: auto;
+        right: auto;
+        position: relative;
+        border-top: 0;
+        border-bottom: 0;
+        border-right: 0;
+        border-left-width: 1px;
+        border-style: solid;
+        left: -8px;
+        height: 40%;
+        display: inline-block;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+
+      a {
+        color: #ffffffc7;
+        font-size: 12px;
+        font-family: $font-b;
+        &:hover {
+          text-decoration: none;
+          color: $font-white;
+        }
+      }
+    }
+  }
+  &--menu-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mq("md") {
+      justify-content: flex-start;
+    }
+    @include mq("xl") {
+      justify-content: center;
+    }
+
+    li {
+      margin-right: 8px;
+      margin-left: 8px;
+
+      a {
+        color: #ffffffc7;
+        font-size: 13px;
+        transition: 0.3s ease-in-out;
+        display: inline-block;
+        &:hover {
+          text-decoration: none;
+          color: $font-white;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
