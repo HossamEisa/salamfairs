@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   background-color: #383938;
-  padding: 8px 0 10px;
+  padding: 6px 0;
 
   &::after {
     content: "";
@@ -10,7 +10,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-image: url('../../assets/img/footer-bg-logo.webp');
+    background-image: url("../../assets/img/footer-bg-logo.webp");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,20 +44,22 @@
     li {
       margin-right: 8px;
       margin-left: 8px;
+      position: relative;
       &::after {
         content: "";
         border-color: #ddd;
         width: auto;
         right: auto;
-        position: relative;
+        position: absolute;
         border-top: 0;
         border-bottom: 0;
         border-right: 0;
         border-left-width: 1px;
         border-style: solid;
-        left: -8px;
+        #{$left}: -8px;
         height: 40%;
         display: inline-block;
+        top: 50%;
       }
       &:last-child {
         &::after {
