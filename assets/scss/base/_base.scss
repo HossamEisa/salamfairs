@@ -3,9 +3,9 @@
   background-repeat: no-repeat;
   background-size: contain;
   
-  // @include mq("xxl") {
-  //   font-size: 20px;
-  // }
+  @include mq("xxl") {
+    font-size: 20px;
+  }
 
   --main-color: #1db05d;
   --text-color: #7a7a7a;
