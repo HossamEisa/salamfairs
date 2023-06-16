@@ -9,49 +9,51 @@
   z-index: 9;
   .navbar-expand-lg .navbar-nav {
     flex-wrap: wrap;
-
-    > .nav-link {
-      font-family: $font-b;
-      font-size: calcRem(18);
-      line-height: calcRem(20);
-      color: var(--white);
-      -webkit-transition: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s;
-      padding: 13px 20px;
-      position: relative;
-      text-decoration: none;
-
-      &::before {
-        content: "";
-        height: 3px;
-        width: 100%;
-        left: 0;
-        background-color: #fff;
-        z-index: 2;
-        bottom: 0;
-        position: absolute;
-        right: 0;
-        left: 0;
-        transform: scale(0);
-
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
-        -webkit-transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
-        -o-transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
-        transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
-      }
-      &:hover {
+    > .nav-item {
+      > .nav-link {
+        padding: 13px 20px;
         &::before {
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
+          content: "";
+          height: 3px;
+          width: 100%;
+          left: 0;
+          background-color: #fff;
+          z-index: 2;
+          bottom: 0;
+          position: absolute;
+          right: 0;
+          left: 0;
+          transform: scale(0);
+
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s;
+          -webkit-transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
+          -o-transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
+          transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
+        }
+        &:hover {
+          &::before {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
         }
       }
     }
   }
-
+  .nav-link {
+    font-family: $font-b;
+    font-size: calcRem(18);
+    line-height: calcRem(20);
+    color: var(--white);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    padding: 13px 20px;
+    position: relative;
+    text-decoration: none;
+  }
   .btn {
     font-size: 13px;
     line-height: 13px;
@@ -95,6 +97,7 @@
       background-color: #fffffffa;
       border-radius: 20px 20px 20px 20px;
       padding: 0;
+      
       .dropdown-item {
         font-family: $font-b;
         font-size: calcRem(18);
