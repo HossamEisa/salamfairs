@@ -1,8 +1,10 @@
 .footer {
   position: relative;
   background-color: #383938;
-  padding: 6px 0;
-
+  padding: 15px 0;
+  @include mq("lg") {
+    padding: 10px 0;
+  }
   &::after {
     content: "";
     position: absolute;
