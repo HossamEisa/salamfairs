@@ -92,6 +92,7 @@
     <header class="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark">
+          <!-- Logo -->
           <a class="navbar-brand fw-bold" href="#">
             <span class="d-none">home page</span>
             <img
@@ -102,17 +103,9 @@
               width="65"
             />
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <!-- Logo -->
+
+          <!-- Main Menu to be sidebar in mobile and nav links in Desktop in one element -->
           <div class="main-menu" id="navbarSupportedContent">
             <div class="collapse navbar-collapse">
               <button
@@ -275,6 +268,29 @@
               </form>
             </div>
           </div>
+          <!-- End Main Menu to be sidebar in mobile and nav links in Desktop in one element -->
+
+          <!-- to show btn and togglle in mobile Only -->
+          <form class="d-flex flex-wrap d-lg-none mobile-btn-control">
+            <a href="#" class="btn btn-outline-light btn-sm me-2" type="button">
+              المتجر
+            </a>
+            <a href="#" class="btn btn-outline-light btn-sm" type="button">
+              شراء تذكرة
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </form>
+          <!-- End to show btn and togglle in mobile Only -->
         </nav>
       </div>
     </header>
