@@ -1,0 +1,29 @@
+.banner {
+  background-color: transparent;
+  min-height: 40vh;
+  background: url(../img/كلمات-متفرقة.png),
+    linear-gradient(240deg, var(--main-color) 0%, var(--mint-green) 100%);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 80px 0;
+
+  &-title {
+    color: var(--white);
+    font-size: calcRem(46);
+    line-height: calcRem(64);
+    color: #f2f5f7;
+    font-family: $font-b; 
+  }
+  &-subtitle {
+    color: var(--white);
+    font-size: calcRem(16);
+    line-height: calcRem(29);
+    color: #f2f5f7;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+}

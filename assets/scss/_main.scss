@@ -19,6 +19,7 @@
 @import './base/reset';
 @import './base/fonts';
 @import './base/base';
+@import './base/typography.scss';
 
 
 // @ Components
@@ -26,10 +27,8 @@
 
 // @ Layout
 
-@import './layout/header';
-@import './layout/breadcrumb';
-@import './layout/grid';
-@import './layout/footer';
+@import './layout/all';
+
 
 
 // Home 
