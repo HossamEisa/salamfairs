@@ -6,8 +6,6 @@ var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
-  console.log("prevScrollpos", prevScrollpos);
-  console.log("طcurrentScrollPos", currentScrollPos);
   /* if scrolling down */
   if (prevScrollpos <= currentScrollPos && prevScrollpos !== currentScrollPos) {
     headerDiv.classList.remove("fixed");
