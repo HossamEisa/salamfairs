@@ -10,7 +10,7 @@
   transition: 0.5s ease-in-out;
   &.fixed {
     background-color: rgb(12, 14, 13);
-    top: 0!important;
+    top: 0 !important;
   }
   &.fixedToTop {
     background-color: rgba(12, 14, 13, 0.25);
@@ -79,7 +79,8 @@
             -o-transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
             transition-timing-function: cubic-bezier(0.58, 0.3, 0.005, 1);
           }
-          &:hover {
+          &:hover,
+          &.active {
             &::before {
               -webkit-transform: scale(1);
               -ms-transform: scale(1);

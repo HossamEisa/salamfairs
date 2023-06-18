@@ -2,26 +2,28 @@ var prevScrollpos = window.scrollY;
 
 /* Get the header element and it's position */
 var headerDiv = document.getElementById("header");
-var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+// var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
-window.onscroll = function () {
+function changeHeaderStyle() {
   var currentScrollPos = window.scrollY;
   /* if scrolling down */
   if (prevScrollpos <= currentScrollPos && prevScrollpos !== currentScrollPos) {
     headerDiv.classList.remove("fixed");
-    headerDiv.style.top = "-7.2rem";
+    headerDiv.style.top = "-100%";
   } else {
     /* otherwise if we're scrolling up, fix the nav to the top */
+    headerDiv.style.top = "0";
     if (currentScrollPos < 100) {
       headerDiv.classList.remove("fixed");
-      headerDiv.style.top = "0";
     } else {
       headerDiv.classList.add("fixed");
-      headerDiv.style.top = "0";
     }
   }
 
   prevScrollpos = currentScrollPos;
+}
+window.onscroll = function () {
+  changeHeaderStyle();
 };
 
 // Init Latest News Carosuel
