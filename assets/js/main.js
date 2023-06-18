@@ -6,20 +6,21 @@ var headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
 
 window.onscroll = function () {
   var currentScrollPos = window.scrollY;
-
-  /* if scrolling down, let it scroll out of view as normal */
-  if (prevScrollpos <= currentScrollPos) {
-    headerDiv.classList.remove("fixedToTop");
+  console.log("prevScrollpos", prevScrollpos);
+  console.log("طcurrentScrollPos", currentScrollPos);
+  /* if scrolling down */
+  if (prevScrollpos <= currentScrollPos && prevScrollpos !== currentScrollPos) {
     headerDiv.classList.remove("fixed");
     headerDiv.style.top = "-7.2rem";
-  }
-  else if (prevScrollpos > 100) {
-    headerDiv.classList.add("fixed");
   } else {
     /* otherwise if we're scrolling up, fix the nav to the top */
-    headerDiv.classList.add("fixedToTop");
-    headerDiv.classList.add("fixed");
-    headerDiv.style.top = "0";
+    if (currentScrollPos < 100) {
+      headerDiv.classList.remove("fixed");
+      headerDiv.style.top = "0";
+    } else {
+      headerDiv.classList.add("fixed");
+      headerDiv.style.top = "0";
+    }
   }
 
   prevScrollpos = currentScrollPos;
