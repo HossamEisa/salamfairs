@@ -13,7 +13,7 @@ function changeHeaderStyle() {
   } else {
     /* otherwise if we're scrolling up, fix the nav to the top */
     headerDiv.style.top = "0";
-    if (currentScrollPos < 100) {
+    if (currentScrollPos <= headerDiv.offsetHeight) {
       headerDiv.classList.remove("fixed");
     } else {
       headerDiv.classList.add("fixed");
@@ -25,6 +25,11 @@ function changeHeaderStyle() {
 window.onscroll = function () {
   changeHeaderStyle();
 };
+
+AOS.init({
+  disable: "mobile",
+  once: true,
+});
 
 // Init Latest News Carosuel
 var latestNewsCarousel = new Swiper(".latest-news-carousel ", {

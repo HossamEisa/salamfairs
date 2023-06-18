@@ -1,7 +1,7 @@
 .billion-campaign {
   background-color: var(--med-grey);
   padding: 20px 0;
-  @include mq('xl') {
+  @include mq("xl") {
     padding: 40px 0;
   }
   &-content {
@@ -16,7 +16,9 @@
       font-size: calcRem(23);
       line-height: calcRem(23);
       color: #54595f;
-      font-weight: 600;
+      @include mq("lg") {
+        font-weight: 600;
+      }
     }
   }
 }
