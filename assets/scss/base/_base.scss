@@ -2,7 +2,7 @@
   font-size: 16px;
   background-repeat: no-repeat;
   background-size: contain;
-  
+
   @include mq("xxl") {
     font-size: 20px;
   }
@@ -12,13 +12,14 @@
   --dark-color: #474747;
   --mint-green: #109d91;
   --white: #fff;
+  --black: #000;
   --light-grey: #f5f5f5;
   --med-grey: #f8f8f8;
 }
 
 body {
   font-family: $font-r, var(--bs-body-font-family);
-  color: $font-text;
+  color: var(--text-color);
   direction: $direction;
   text-align: $right;
   background-color: var(--light-grey);

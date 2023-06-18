@@ -2,6 +2,13 @@
 
 $font-r: toggleFont(Poppins-Regular, DINNextLTArabic-Regular);
 $font-b: toggleFont(Poppins-Bold, DINNextLTArabic-Bold);
+
+$bukra-r: toggleFont(Poppins-Bold, bukra-regular);
+$bukra-m: toggleFont(Poppins-Bold, bukra-medium);
+$bukra-b: toggleFont(Poppins-Bold, bukra-bold);
+
+
+
 $font-l: toggleFont(Poppins-Light, Cairo-Light);
 $font-m: toggleFont(Poppins-Medium, Cairo-Medium);
 $font-sb: toggleFont(Poppins-SemiBold, Cairo-SemiBold);

@@ -1,3 +1,23 @@
 .terms-conditions {
+  padding-top: 40px;
+  a {
+    color: var(--main-color);
+    text-decoration: none;
+    &:hover {
+      color: var(--mint-green);
+      text-decoration: none;
+    }
+  }
+  .terms-title {
+    color: var(--main-color);
+    font-size: calcRem(30);
+    line-height: calcRem(38);
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
 
+  p {
+    font-size: calcRem(16);
+    line-height: calcRem(24);
+  }
 }
