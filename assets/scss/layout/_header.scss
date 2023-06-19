@@ -1,19 +1,17 @@
 .header {
   transition: background 0.3s;
   background-color: rgba(12, 14, 13, 0.25);
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 9;
   transition: 0.5s ease-in-out;
+  position: absolute;
   &.fixed {
     background-color: rgb(12, 14, 13);
     top: 0 !important;
-  }
-  &.fixedToTop {
-    background-color: rgba(12, 14, 13, 0.25);
+    position: fixed;
   }
 
   .navbar-toggler {
