@@ -77,13 +77,22 @@
     background-color: #fffffff7;
     border-radius: 25px;
     box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
-    font-size: calcRem(16);
-
+    font-size: calcRem(14);
+    font-family: $bukra-r;
+    @include mq("lg") {
+      font-size: calcRem(12);
+    }
+    .form-label {
+      margin-bottom: 0.3rem;
+      color: #4b4f58;
+    }
     input {
       padding: 0.75em;
       border-color: #dddddd;
       background-color: #fafafa;
-      font-size: calcRem(16);
+      border-radius: 2px;
+      font-size: calcRem(12);
+
       &:focus {
         border: 1px dotted;
         border-color: #dddddd;
@@ -94,15 +103,40 @@
     }
     select {
       padding: 0.75em;
+      border-radius: 2px;
       border-color: #dddddd;
+      font-size: calcRem(12);
       background-color: #fafafa;
-      font-size: calcRem(16);
       &:focus {
         border-color: #dddddd;
         background-color: #fff;
         outline: none;
         box-shadow: none;
       }
+    }
+    textarea {
+      border-radius: 2px;
+      background-color: #fafafa;
+    }
+
+    .btn {
+      transition: 0.5s ease background;
+      border-color: transparent;
+      background: linear-gradient(240deg, #61ce70 0%, #109d91 100%);
+      padding-top: 5px;
+      &:hover {
+        background: linear-gradient(240deg, #109d91 0%, #61ce70 100%);
+        color: var(--white);
+        border-color: transparent;
+      }
+    }
+
+    .form-validation-area {
+      margin-top: calcRem(25);
+      padding: calcRem(12);
+      border: 2px solid #ffb900;
+      font-size: calcRem(16);
+      line-height: calcRem(25);
     }
   }
 }

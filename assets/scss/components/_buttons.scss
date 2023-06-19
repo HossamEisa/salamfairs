@@ -1,10 +1,10 @@
 .btn {
   --bs-btn-padding-x: 1.3rem;
-  --bs-btn-padding-y: 0.575rem;
-  --bs-btn-font-size: 1rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-font-size: 0.9rem;
   --bs-btn-border-radius: 50px;
+  --bs-btn-line-height: 1.5;
   font-family: $font-b;
-  font-size: calcRem(16);
   i {
     font-size: min(0.8rem, 1rem);
   }

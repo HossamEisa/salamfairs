@@ -379,8 +379,8 @@
       <!-- Start Main -->
       <main class="contact-us">
         <div class="container">
-          <div class="row">
-            <div class="col-md-8">
+          <div class="row gx-0 align-items-center-md">
+            <div class="col-lg-7 col-xl-8 pe-lg-4  mb-5 mb-lg-0">
               <h1 class="banner-title">تواصل معنا</h1>
               <p class="banner-subtitle">
                 نسعد بتواصلكم معنا من خلال تعبئة النموذج، وسيتم التواصل معكم في
@@ -430,76 +430,85 @@
                 <a href="tel:+966920008397">920008397</a>
               </div>
             </div>
-            <div class="col-md-4">
+            <!--Form-->
+            <div class="col-lg-5 col-xl-4">
               <form class="contact-us-form">
+                <!--First 3 inputs -->
+
                 <div class="row gx-0">
-                  <div class="col">
+                  <div class="col-lg">
                     <div class="mb-3">
                       <label for="name" class="form-label"
                         >الاسم <span class="text-danger">*</span>
                       </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="name"
-                      />
-                      <span class="text-danger">هذا الحقل مطلوب.</span>
+                      <input type="text" class="form-control" id="name" />
+                      <p class="text-danger mt-1">هذا الحقل مطلوب.</p>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-lg">
                     <div class="mb-3">
                       <label for="mobile" class="form-label"
-                      >رقم الجوال <span class="text-danger">*</span>
-                    </label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="mobile"
-                      />
+                        >رقم الجوال <span class="text-danger">*</span>
+                      </label>
+                      <input type="number" class="form-control" id="mobile" />
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-lg">
                     <div class="mb-3">
-                      <label for="exampleFormControlInput1" class="form-label"
-                        >Email address</label
-                      >
+                      <label for="email" class="form-label"
+                        >البريد الإلكتروني <span class="text-danger">*</span>
+                      </label>
                       <input
                         type="email"
                         class="form-control"
-                        id="exampleFormControlInput1"
+                        id="email"
                       />
                     </div>
                   </div>
                 </div>
 
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+                <!--Select -->
+                <div class="mb-3">
+                  <label for="contact-selec" class="form-label"
+                    >نوع التواصل <span class="text-danger">*</span></label
+                  >
+                  <select
+                    id="contact-selec"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>---</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
 
                 <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >الاسم <span class="text-danger">*</span>
+                  <label for="message" class="form-label"
+                    >موضوع الرسالة
+                    <span class="text-danger">*</span>
                   </label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="name@example.com"
-                  />
+                  <input type="text" class="form-control" id="message" />
                 </div>
 
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label"
-                    >Example textarea</label
-                  >
+                    >الرسالة <span class="text-danger">*</span>
+                  </label>
                   <textarea
                     class="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
                   ></textarea>
+                </div>
+                <div>
+                  <button class="btn btn-primary">إرسال</button>
+                </div>
+
+                <div class="form-validation-area">
+                  يوجد خطأ أو أكثر بأحد الحقول، يرجى التحقق ومن ثم المحاولة مرة
+                  أخرى.
                 </div>
               </form>
             </div>
