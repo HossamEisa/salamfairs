@@ -5,7 +5,7 @@ var headerDiv = document.getElementById("header");
 function changeHeaderStyle() {
   var currentScrollPos = window.scrollY;
   /* if scrolling down */
-  if (prevScrollpos <= currentScrollPos) {
+  if (prevScrollpos < currentScrollPos) {
     headerDiv.classList.remove("fixed");
     headerDiv.style.top = "-100%";
   } else {

@@ -1,0 +1,108 @@
+.contact-us {
+  background-color: transparent;
+  min-height: 100%;
+  background: url(../img/banner-bg.png),
+    linear-gradient(90deg, #109d91 50%, #1db05d 100%);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 80px 0 40px;
+  @include mq("lg") {
+    padding: 120px 0;
+  }
+  .links--menu-social {
+    a {
+      width: 40px;
+      height: 40px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+      display: inline-block;
+      opacity: 1;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59) 0s;
+      line-height: 40px;
+      background-color: #ffffff;
+      border-radius: 13px;
+      margin: 5px 5px 5px 5px;
+      font-size: calcRem(24);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--mint-green);
+      &::before {
+        content: "";
+        height: 100%;
+        left: 0%;
+        position: absolute;
+        top: 100%;
+        transition: all 0.35s;
+        width: 100%;
+        background-color: #58595b;
+        z-index: 1;
+      }
+      &:hover {
+        color: var(--white);
+        i {
+          position: relative;
+          z-index: 2;
+        }
+        &::before {
+          left: 0%;
+          top: 0%;
+        }
+      }
+    }
+  }
+
+  .contact-us-phone {
+    margin-top: 25px;
+    a {
+      color: #f2f5f7;
+      font-size: calcRem(20);
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 7.6px;
+    }
+  }
+
+  //   Form
+
+  .contact-us-form {
+    padding: 20px;
+    background-color: #fffffff7;
+    border-radius: 25px;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    font-size: calcRem(16);
+
+    input {
+      padding: 0.75em;
+      border-color: #dddddd;
+      background-color: #fafafa;
+      font-size: calcRem(16);
+      &:focus {
+        border: 1px dotted;
+        border-color: #dddddd;
+        background-color: #fff;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    select {
+      padding: 0.75em;
+      border-color: #dddddd;
+      background-color: #fafafa;
+      font-size: calcRem(16);
+      &:focus {
+        border-color: #dddddd;
+        background-color: #fff;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

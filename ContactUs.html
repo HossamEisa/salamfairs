@@ -377,64 +377,134 @@
         </div>
       </header>
       <!-- Start Main -->
-      <main>
-        <section class="banner">
-          <div class="container">
-            <h1 class="banner-title">الأسئلة الشائعة</h1>
-            <p class="banner-subtitle">
-              الاسئلة المتكررة للزوار والإجابات المختصرة
-            </p>
-          </div>
-        </section>
+      <main class="contact-us">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="banner-title">تواصل معنا</h1>
+              <p class="banner-subtitle">
+                نسعد بتواصلكم معنا من خلال تعبئة النموذج، وسيتم التواصل معكم في
+                أقرب وقت ممكن
+              </p>
 
-        <section class="content-section faq">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="card standard h-100">
-                  <div class="card-body">
-                    <a class="card-image" href="/"
-                      ><img
-                        decoding="async"
-                        src="./assets/img/icon1.png"
-                        class="img-fluid"
-                        alt="..."
-                        loading="lazy"
-                    /></a>
-                    <h5 class="card-title">
-                      <a href="/">متحف المدينة المنورة</a>
-                    </h5>
-                    <h6 class="card-subtitle">
-                      <a href="/FAQ.html"> زيارة صفحة الأسئلة الشائعة </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
+              <ul class="links--menu-social">
+                <li>
+                  <a href="tel:+966920008397" target="_blank">
+                    <span class="d-none">Phone-alt</span>
+                    <i class="fas fa-phone-alt"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wa.me/966920008397" target="_blank">
+                    <span class="d-none">Whatsapp</span>
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/salamforfairs" target="_blank">
+                    <span class="d-none">Twitter</span>
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCVbbijXeRE_lHj8VZ7WJQ_A"
+                    target="_blank"
+                  >
+                    <span class="d-none">Youtube</span>
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/salam_forfairs"
+                    target="_blank"
+                  >
+                    <span class="d-none">Instagram</span>
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
 
-              <div class="col-lg-6">
-                <div class="card standard h-100">
-                  <div class="card-body">
-                    <a class="card-image" href="/"
-                      ><img
-                        decoding="async"
-                        src="./assets/img/icon2.png"
-                        class="img-fluid"
-                        alt="..."
-                        loading="lazy"
-                    /></a>
-                    <h5 class="card-title">
-                      <a href="/">متحف الرباط - مملكة المغرب</a>
-                    </h5>
-                    <h6 class="card-subtitle">
-                      <a href="/FAQ.html">
-                        زيارة صفحة الأسئلة الشائعة </a>
-                    </h6>
-                  </div>
-                </div>
+              <div class="contact-us-phone">
+                <a href="tel:+966920008397">920008397</a>
               </div>
             </div>
+            <div class="col-md-4">
+              <form class="contact-us-form">
+                <div class="row gx-0">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="name" class="form-label"
+                        >الاسم <span class="text-danger">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                      />
+                      <span class="text-danger">هذا الحقل مطلوب.</span>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="mobile" class="form-label"
+                      >رقم الجوال <span class="text-danger">*</span>
+                    </label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="mobile"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >الاسم <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="name@example.com"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >Example textarea</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </form>
+            </div>
           </div>
-        </section>
+        </div>
       </main>
       <!-- End Main -->
       <!-- Start Footer -->
@@ -460,14 +530,14 @@
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="/FAQ.html">
                             <span class="elementor-icon-list-text"
                               >الأسئلة الشائعة</span
                             >
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="/ContactUs.html">
                             <span class="elementor-icon-list-text"
                               >تواصل معنا</span
                             >
