@@ -1,23 +1,23 @@
 var prevScrollpos = window.scrollY;
-console.log('prevScrollpos', prevScrollpos)
 /* Get the header element and it's position */
 var headerDiv = document.getElementById("header");
 function changeHeaderStyle() {
   var currentScrollPos = window.scrollY;
-  /* if scrolling down */
-  if (prevScrollpos < currentScrollPos) {
-    headerDiv.classList.remove("fixed");
-    headerDiv.style.top = "-100%";
-  } else {
-    /* otherwise if we're scrolling up, fix the nav to the top */
+  if (currentScrollPos > headerDiv.offsetHeight + 100) {
+    headerDiv.classList.add("fixed");
     headerDiv.style.top = "0";
-    if (currentScrollPos <= 200) {
-      headerDiv.classList.remove("fixed");
+    /* if scrolling down */
+    if (prevScrollpos < currentScrollPos) {
+      headerDiv.style.top = - headerDiv.clientHeight +"px";
     } else {
+      /* otherwise if we're scrolling up, fix the nav to the top */
+      headerDiv.style.top = "0";
       headerDiv.classList.add("fixed");
     }
+  } else {
+    headerDiv.classList.remove("fixed");
+    headerDiv.style.top = "0";
   }
-
   prevScrollpos = currentScrollPos;
 }
 window.onscroll = function () {

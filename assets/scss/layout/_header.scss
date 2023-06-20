@@ -10,7 +10,6 @@
   position: absolute;
   &.fixed {
     background-color: rgb(12, 14, 13);
-    top: 0 !important;
     position: fixed;
     z-index: 20;
   }
