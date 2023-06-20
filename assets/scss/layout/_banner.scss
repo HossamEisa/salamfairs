@@ -32,7 +32,62 @@
     color: #f2f5f7;
     font-weight: 600;
     @include mq("lg") {
-        margin-top: 20px;
-      }
+      margin-top: 20px;
+    }
+  }
+}
+
+.banner-img {
+  background-color: transparent;
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center center ;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 80px 0 40px;
+  position: relative;
+  @include mq("lg") {
+    padding: 120px 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: #000000f0;
+    opacity: 0.53;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-title {
+    color: var(--white);
+    font-size: calcRem(32);
+    line-height: calcRem(64);
+    color: #f2f5f7;
+    font-family: $font-b;
+    @include mq("lg") {
+      font-size: calcRem(46);
+      line-height: calcRem(64);
+    }
+  }
+  &-subtitle {
+    color: var(--white);
+    font-size: calcRem(16);
+    line-height: calcRem(29);
+    color: #f2f5f7;
+    font-weight: 600;
+    @include mq("lg") {
+      margin-top: 20px;
+    }
   }
 }

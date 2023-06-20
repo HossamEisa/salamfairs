@@ -53,3 +53,24 @@
     }
   }
 }
+
+.card-link {
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: calcRem(25) 15px;
+  display: flex;
+  color: var(--mint-green);
+  font-family: $font-b;
+  font-weight: 600;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease;
+  font-size: calcRem(25);
+  line-height: calcRem(30);
+  &:hover {
+    box-shadow: 0 0 10px #eee;
+    color: var(--main-color);
+  }
+}
