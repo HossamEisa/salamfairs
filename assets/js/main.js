@@ -3,21 +3,22 @@ var prevScrollpos = window.scrollY;
 var headerDiv = document.getElementById("header");
 function changeHeaderStyle() {
   var currentScrollPos = window.scrollY;
-  if (currentScrollPos > headerDiv.offsetHeight + 100) {
+  /* if scrolling down */
+  if (
+    prevScrollpos < currentScrollPos &&
+    prevScrollpos > 300
+  ) {
+    headerDiv.style.top = -headerDiv.offsetHeight + "px";
     headerDiv.classList.add("fixed");
+  } else if (prevScrollpos < 300) {
     headerDiv.style.top = "0";
-    /* if scrolling down */
-    if (prevScrollpos < currentScrollPos) {
-      headerDiv.style.top = - headerDiv.clientHeight +"px";
-    } else {
-      /* otherwise if we're scrolling up, fix the nav to the top */
-      headerDiv.style.top = "0";
-      headerDiv.classList.add("fixed");
-    }
-  } else {
     headerDiv.classList.remove("fixed");
+  } else {
+    /* otherwise if we're scrolling up, fix the nav to the top */
     headerDiv.style.top = "0";
+    headerDiv.classList.add("fixed");
   }
+
   prevScrollpos = currentScrollPos;
 }
 window.onscroll = function () {
