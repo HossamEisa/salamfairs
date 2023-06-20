@@ -20,3 +20,8 @@
 .content-section {
   padding: calcRem(40) 0;
 }
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+}

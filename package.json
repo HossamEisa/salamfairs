@@ -1,23 +1,24 @@
 {
-  "name": "al-madinah-international-university",
+  "name": "salamfair",
   "version": "1.0.0",
-  "description": "Al-Madinah International University Website",
+  "description": "SalamFair",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch assets/scss:assets/css --style compressed"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fady-elshahat/al-madinah-international-university.git"
+    "type": "git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fady-elshahat/al-madinah-international-university/issues"
-  },
-  "homepage": "https://github.com/fady-elshahat/al-madinah-international-university#readme",
   "devDependencies": {
-    "sass": "^1.54.3"
+    "sass": "^1.54.3",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-terser": "^2.1.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1"
