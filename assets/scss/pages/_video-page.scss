@@ -1,0 +1,140 @@
+.video-section {
+  padding: calcRem(40) 0;
+
+  &-title {
+    font-size: calcRem(30);
+    line-height: calcRem(38);
+    color: var(--main-color);
+    font-family: $font-b;
+  }
+  iframe {
+    height: 250px;
+    width: 100%;
+    @include mq("lg") {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .video-gallery-list-wrapper {
+    background-color: #f1f3f5;
+  }
+  .video-gallery-title {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 0;
+    overflow-wrap: anywhere;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    margin: auto 0;
+    border-bottom: 1px solid #d5dadf;
+    padding-inline-start: 15px;
+    @include ellipse-rows(1);
+    padding-top: 10px;
+  }
+
+  .video-gallery-playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 400px;
+    @extend %scroll;
+    @include mq("lg") {
+      height: 400px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding-inline-start: 15px;
+      padding-inline-end: 15px;
+
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      color: #7a7a7a;
+      &:hover {
+        background-color: #f1f3f5;
+        .video-gallery-playlist-title {
+          color: #556068;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-thumb {
+      position: relative;
+      width: 75px;
+      height: 42px;
+      display: inline-flex;
+      img {
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+      i {
+        position: absolute;
+        top: 60%;
+        #{$right}: 5px;
+        color: var(--white);
+        transform: translateY(-50%);
+        text-shadow: 0 0 3px #000;
+      }
+    }
+    &-title {
+      @include ellipse-rows(1);
+      font-size: calcRem(14);
+      line-height: calcRem(17);
+      font-family: $font-b;
+      font-weight: 400;
+    }
+  }
+
+  &.with-bg {
+    background-color: transparent;
+    background: url(../img/banner-bg.png),
+      linear-gradient(180deg, var(--main-color) 0%, var(--mint-green) 100%);
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+      box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+
+    @include mq("xl") {
+      min-height: 100vh;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../../assets/img/bg.svg");
+      background-repeat: no-repeat;
+      width: 100%;
+      left: 0;
+      right: 0;
+      height: 150px;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+      transform: rotate(180deg);
+    }
+    .video-section-title {
+      color: var(--white);
+    }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
