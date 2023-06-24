@@ -69,13 +69,11 @@ body {
   margin-top: -3rem;
 }
 
-// body {
-//   :is(.international-museums) {
-//     background-color: red!important;
-//   }
-// }
-// body {
-//   :has(.international-museums) {
-//     background-color: green!important;
-//   }
-// }
+:is(.international-museums) {
+  background-color: red !important;
+}
+body {
+  :has(.international-museums) {
+    background-color: green !important;
+  }
+}
