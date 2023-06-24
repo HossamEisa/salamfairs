@@ -281,7 +281,7 @@
                     المتجر
                   </a>
                   <a href="#" class="btn btn-outline-light btn-sm">
-                    شراء تذكرة
+                    احجز تذكرة
                   </a>
                 </form>
                 <!-- / side controlls -->
@@ -359,7 +359,7 @@
             <!-- to show btn and togglle in mobile Only -->
             <form class="d-flex flex-wrap d-lg-none mobile-btn-control">
               <a href="#" class="btn btn-outline-light btn-sm me-2"> المتجر </a>
-              <a href="#" class="btn btn-outline-light btn-sm"> شراء تذكرة </a>
+              <a href="#" class="btn btn-outline-light btn-sm"> احجز تذكرة </a>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -377,7 +377,9 @@
         </div>
       </header>
       <!-- Start Main -->
-      <main class="abeerWords" id="container"></main>
+      <main class="abeerWords">
+        <div id="flip-book-box"></div>
+      </main>
       <!-- End Main -->
       <!-- Start Footer -->
       <footer class="footer">
@@ -509,12 +511,13 @@
       function theKingIsBlackPageCallback(n) {
         return {
           type: "image",
-          src: "./jq-3d-flip-book/books/image/theKingIsBlack/" + (n + 1) + ".jpg",
+          src:
+            "./jq-3d-flip-book/books/image/theKingIsBlack/" + (n + 1) + ".jpg",
           interactive: true,
         };
       }
 
-      $("#container").FlipBook({
+      $("#flip-book-box").FlipBook({
         pageCallback: theKingIsBlackPageCallback,
         ready: function (scene) {
           $(scene.view.getContainer())

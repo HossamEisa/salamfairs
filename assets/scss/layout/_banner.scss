@@ -2,7 +2,7 @@
   background-color: transparent;
   background: url(../img/banner-bg.png),
     linear-gradient(90deg, #109d91 50%, #1db05d 100%);
-  min-height: 35vh;
+  min-height: 30vh;
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
@@ -14,6 +14,9 @@
     padding: 120px 0;
   }
 
+  @include mq("xl") {
+    min-height: 40vh;
+  }
   &-title {
     color: var(--white);
     font-size: calcRem(32);
@@ -23,6 +26,7 @@
     @include mq("lg") {
       font-size: calcRem(46);
       line-height: calcRem(64);
+      margin-top: 30px;
     }
   }
   &-subtitle {
@@ -38,20 +42,12 @@
 }
 
 .banner-img {
+  @extend .banner;
   background-color: transparent;
-  min-height: 35vh;
-  background-size: cover;
-  background-position: center center ;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-  padding: 80px 0 40px;
+  background-position: center center;
   position: relative;
   background-color: var(--mint-green);
-  @include mq("lg") {
-    padding: 120px 0;
-  }
+
   &::after {
     content: "";
     position: absolute;
@@ -70,25 +66,9 @@
     z-index: 1;
   }
 
-  &-title {
-    color: var(--white);
-    font-size: calcRem(32);
-    line-height: calcRem(64);
-    color: #f2f5f7;
-    font-family: $font-b;
-    @include mq("lg") {
-      font-size: calcRem(46);
-      line-height: calcRem(64);
-    }
-  }
-  &-subtitle {
-    color: var(--white);
-    font-size: calcRem(16);
-    line-height: calcRem(29);
-    color: #f2f5f7;
-    font-weight: 600;
-    @include mq("lg") {
-      margin-top: 20px;
+  &.no-shadow {
+    &::after {
+      display: none;
     }
   }
 }

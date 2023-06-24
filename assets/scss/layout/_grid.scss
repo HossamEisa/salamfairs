@@ -19,10 +19,15 @@
 
 .content-section {
   padding: calcRem(40) 0;
-
 }
 @media only screen and (max-width: 992px) {
   .container {
     max-width: 100%;
+  }
+}
+
+@include mq("xxl") {
+  .container {
+    max-width: 1140px;
   }
 }
