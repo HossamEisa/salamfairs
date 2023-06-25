@@ -30,7 +30,7 @@ AOS.init({
   once: true,
 });
 
-// Init Latest News Carosuel
+// Init HomePage Latest News Carosuel
 var latestNewsCarousel = new Swiper(".latest-news-carousel ", {
   effect: "cube",
   speed: 800,
@@ -53,7 +53,7 @@ var latestNewsCarousel = new Swiper(".latest-news-carousel ", {
   },
 });
 
-// Init Latest News Carosuel
+// Init HomePage Latest News Carosuel
 var abeerCarousel = new Swiper(".abeer-carousel ", {
   speed: 800,
   autoplay: {
@@ -70,7 +70,7 @@ var abeerCarousel = new Swiper(".abeer-carousel ", {
   },
 });
 
-// Init international-museums-item  Carosuel
+// Init HomePage international-museums-item  Carosuel
 var internationalCarosuel = new Swiper(".international-museums-carousel ", {
   speed: 800,
   autoplay: {
@@ -80,5 +80,23 @@ var internationalCarosuel = new Swiper(".international-museums-carousel ", {
   pagination: {
     el: ".international-museums-carousel .swiper-pagination",
     clickable: true,
+  },
+});
+
+
+// Init News Details Page  Carosuel
+var newsDetailsCarousel = new Swiper(".news-details-carousel", {
+  speed: 800,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  pagination: {
+    el: ".news-details-carousel .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".news-details-carousel .swiper-button-next",
+    prevEl: ".news-details-carousel .swiper-button-prev",
   },
 });

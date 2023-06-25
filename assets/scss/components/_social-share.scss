@@ -1,0 +1,47 @@
+.social-share {
+  .social_share,
+  button {
+    all: unset;
+    border-radius: 50%;
+    border: 1px solid;
+    width: 38px;
+    height: 37px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 4px;
+    line-height: 1;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.4s ease-in-out;
+    i {
+      font-size: 20px;
+    }
+
+    &[data-type="whatsapp"] {
+      color: #25d366;
+    }
+    &[data-type="twitter"] {
+      color: #1da1f2;
+    }
+    &[data-type="fb"] {
+      color: #3b5998;
+    }
+    &[data-type="telegram"] {
+      color: #2ca5e0;
+    }
+    &[data-type="pinterest"] {
+      color: #bd081c;
+    }
+    &[data-type="email"] {
+      color: #ea4335;
+    }
+    &.print {
+      color: #aaa;
+    }
+    &:hover {
+      filter: brightness(1) contrast(2);
+    }
+  }
+}

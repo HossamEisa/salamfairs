@@ -183,6 +183,108 @@
       }
     }
   }
+  &.standard-with-image {
+    background: none;
+    border: 1px solid #f4f3f3;
+    overflow: hidden;
+    border-radius: 0;
+    .card-image {
+      $imgmobile: 120px;
+      $imgLG: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 100%;
+      position: relative;
+      height: $imgmobile;
+      @include mq("md") {
+        height: $imgLG;
+      }
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      img {
+        height: $imgmobile;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: 0.5s ease;
+        object-fit: cover;
+        @include mq("md") {
+          height: $imgLG;
+        }
+      }
+    }
+
+    .card-body {
+      padding: calcRem(15);
+      .card-title {
+        color: var(--text-color);
+        font-size: calcRem(14);
+        line-height: calcRem(24);
+        font-family: $font-b;
+        font-weight: 400;
+        a {
+          color: inherit;
+          text-decoration: none;
+          color: var(--main-color);
+          &:hover {
+            color: var(--mint-green);
+          }
+        }
+      }
+      .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        &-link {
+          margin: 0 4px;
+          line-height: 1.3em;
+          font-size: 10px;
+          margin-bottom: 13px;
+          color: #707070;
+          display: inline-block;
+          i {
+            margin-inline-end: 5px;
+          }
+          a {
+            color: #707070;
+            text-decoration: none;
+            &:hover {
+              color: var(--mint-green);
+            }
+          }
+          &:first-child {
+            margin-inline-start: 0;
+          }
+          &:last-child {
+            margin-inline-start: 0;
+          }
+        }
+      }
+      .card-text {
+        color: var(--main-color);
+        font-size: 13px;
+        line-height: 21px;
+        margin-top: 10px;
+        color: #54595f;
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            color: var(--mint-green);
+          }
+        }
+      }
+    }
+    .btn-secondary {
+      padding: 10px 20px;
+      border-radius: 0;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
 }
 
 .card-link {

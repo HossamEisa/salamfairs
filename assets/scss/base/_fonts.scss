@@ -26,6 +26,14 @@
 }
 
 @font-face {
+  font-family: toggleFont("Cairo-Regular", "DINNextLTArabic-Light");
+  src: toggleFont(
+    url("../fonts/Cairo-Regular.ttf"),
+    url("../fonts/DINNextLTArabic-Light.ttf")
+  );
+}
+
+@font-face {
   font-family: toggleFont("Cairo-Bold", "DINNextLTArabic-Bold");
   src: toggleFont(
     url("../fonts/Cairo-Bold.ttf"),
@@ -33,9 +41,7 @@
   );
 }
 
-.font-m {
-  font-family: $font-m;
-}
+
 .font-sb {
   font-family: $font-b;
 }

@@ -1,41 +1,32 @@
 // Fonts
 
 $font-r: toggleFont(Poppins-Regular, DINNextLTArabic-Regular);
+$font-l: toggleFont(Poppins-Bold, DINNextLTArabic-Light);
 $font-b: toggleFont(Poppins-Bold, DINNextLTArabic-Bold);
 
 $bukra-r: toggleFont(Poppins-Bold, bukra-regular);
 $bukra-m: toggleFont(Poppins-Bold, bukra-medium);
 $bukra-b: toggleFont(Poppins-Bold, bukra-bold);
 
-
-
-$font-l: toggleFont(Poppins-Light, Cairo-Light);
-$font-m: toggleFont(Poppins-Medium, Cairo-Medium);
-$font-sb: toggleFont(Poppins-SemiBold, Cairo-SemiBold);
-
-
 // Variables
 
-$font-white: #FFFFFF;
-$font-primary: #FFDD00;
+$font-white: #ffffff;
+$font-primary: #ffdd00;
 $font-text: #000000;
 $font-black-light: #707070;
 $font-black-50: #434343;
-$font-secondary: #ED1A3B;
-
+$font-secondary: #ed1a3b;
 
 $border-light: 1px solid #f6feff36;
 $border-radius-50: 50px;
 
 $bg-sideBar: #202530;
-$bg-footer: #0A2564;
-$bg-section: #F3EFE5;
-$bg-mediu-center: #F9F7F2;
+$bg-footer: #0a2564;
+$bg-section: #f3efe5;
+$bg-mediu-center: #f9f7f2;
 
-$dark-blue: #3A4573;
+$dark-blue: #3a4573;
 
 $box-shadow: 0px 0px 40px -10px rgb(105 99 99 / 40%);
 
-
 $border-radius: 5px;
-
