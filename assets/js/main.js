@@ -100,3 +100,23 @@ var newsDetailsCarousel = new Swiper(".news-details-carousel", {
     prevEl: ".news-details-carousel .swiper-button-prev",
   },
 });
+
+// meusemSwiper
+meusemSwiper
+
+// Init News Details Page  Carosuel
+var meusemSwiper = new Swiper(".meusemSwiper", {
+  speed: 800,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  pagination: {
+    el: ".meusemSwiper .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".meusemSwiper .swiper-button-next",
+    prevEl: ".meusemSwiper .swiper-button-prev",
+  },
+});

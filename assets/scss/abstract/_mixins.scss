@@ -1,170 +1,171 @@
-@import './variables';
+@import "./variables";
 
 @mixin absoluteCalc {
-     position: absolute;
-     top: 50%;
-     #{$left}: 50%;
-     transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  #{$left}: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin flexCentar {
-     display: flex;
-     justify-content: center;
-     align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin btnSecondary {
-     color: $font-white;
-     background-color: $font-secondary;
-     padding: 18px 24px;
-     font-size: 15px;
-     @include flexCentar;
-     font-weight: 400;
+  color: $font-white;
+  background-color: $font-secondary;
+  padding: 18px 24px;
+  font-size: 15px;
+  @include flexCentar;
+  font-weight: 400;
 }
 
 @mixin btnYallow {
-     padding: 0px 20px;
-     background-color: $font-primary;
-     color: $font-text;
-     border-radius: $border-radius-50;
-     font-size: 16px;
-     line-height: 40px;
-     font-weight: 500;
+  padding: 0px 20px;
+  background-color: $font-primary;
+  color: $font-text;
+  border-radius: $border-radius-50;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 500;
 }
 
 @mixin containerCounter {
-     position: relative;
-     counter-increment: counter;
+  position: relative;
+  counter-increment: counter;
 }
 
 @mixin counter {
-     content: "0"counter(counter);
-     position: absolute;
-     top: 0;
-     #{$left}: 0;
-     padding-#{$right}: 25px;
-     font-size: 20px;
-     font-weight: 400;
-     color: $font-black-50;
+  content: "0" counter(counter);
+  position: absolute;
+  top: 0;
+  #{$left}: 0;
+  padding-#{$right}: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  color: $font-black-50;
 }
 
 @mixin line {
-     content: '';
-     position: absolute;
-     bottom: calc((52.5px / 2) - 5px);
-     #{$left}: 5px;
-     width: 52.5px;
-     height: 1px;
-     background-color: $font-black-light;
-     transform: rotate(-50deg);
+  content: "";
+  position: absolute;
+  bottom: calc((52.5px / 2) - 5px);
+  #{$left}: 5px;
+  width: 52.5px;
+  height: 1px;
+  background-color: $font-black-light;
+  transform: rotate(-50deg);
 
-     @at-root {
-          [dir="rtl"] & {
-               transform: rotate(50deg);
-          }
-     }
+  @at-root {
+    [dir="rtl"] & {
+      transform: rotate(50deg);
+    }
+  }
 }
 
 @mixin spanCounterAndLine {
-     display: inline-block;
-     width: 52.5px;
-     height: 49.5px;
-     position: relative;
-     margin-#{$right}: 15.5px;
-     font-size: 20px;
+  display: inline-block;
+  width: 52.5px;
+  height: 49.5px;
+  position: relative;
+  margin-#{$right}: 15.5px;
+  font-size: 20px;
 }
 
 @mixin waterMark {
-     position: relative;
-     font-family: $font-r;
-     font-weight: 500;
-     font-size: 70px;
-     text-align: center;
-     margin: 20px auto 20px auto;
-     z-index: 111;
-     color: $font-black-50;
+  position: relative;
+  font-family: $font-r;
+  font-weight: 500;
+  font-size: 70px;
+  text-align: center;
+  margin: 20px auto 20px auto;
+  z-index: 111;
+  color: $font-black-50;
 }
 
 @mixin wateMarkBefore {
-     content: attr(data-title);
-     position: absolute;
-     font-family: $font-b;
-     font-size: calcRem(80);
-     text-transform: capitalize;
-     #{$left}: 0;
-     top: 60%;
-     transform: translateY(-50%);
-     text-align: center;
-     width: 100%;
-     overflow: hidden;
-     color: rgba(0, 0, 0, 0.04);
+  content: attr(data-title);
+  position: absolute;
+  font-family: $font-b;
+  font-size: calcRem(80);
+  text-transform: capitalize;
+  #{$left}: 0;
+  top: 60%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.04);
 
-     @include mq('lg') {
-          font-size: calcRem(160);
-          top: 60%;
-     }
+  @include mq("lg") {
+    font-size: calcRem(160);
+    top: 60%;
+  }
 }
 
 @mixin ScrollBar {
-     ::-webkit-scrollbar {
-          width: 5px !important;
-     }
+  ::-webkit-scrollbar {
+    width: 5px !important;
+  }
 
-     /* Track */
-     ::-webkit-scrollbar-track {
-          background: #dbd9d9;
-          width: 5px !important;
-     }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #dbd9d9;
+    width: 5px !important;
+  }
 
-     /* Handle */
-     ::-webkit-scrollbar-thumb {
-          background: rgb(176, 176, 176);
-          border-radius: 5px;
-          width: 5px !important;
-     }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(176, 176, 176);
+    border-radius: 5px;
+    width: 5px !important;
+  }
 
-     /* Handle on hover */
-     ::-webkit-scrollbar-thumb:hover {
-          background: rgb(156, 156, 156);
-     }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(156, 156, 156);
+  }
 }
 
 @mixin lineTab {
-     content: none;
-     position: absolute;
-     width: 40%;
-     height: 3px;
-     background-color: $font-secondary;
-     bottom: 7px;
-     #{$left}: 20px;
+  content: none;
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  background-color: $font-secondary;
+  bottom: 7px;
+  #{$left}: 20px;
 }
 
 //////////////////////////////////////////////
 // Use this with Mobile First
 //////////////////////////////////////////////
 
-$breakpoints: ('xs': 0,
-     'sm': 576px,
-     'md': 768px,
-     'lg': 992px,
-     'xl': 1200px,
-     'xxl': 1535px,
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1535px,
 );
 
 //use max if use desktop first  --- mobile first change it to min
 @mixin mq($width, $type: min) {
-     @if map_has_key($breakpoints, $width) {
-          $width: map_get($breakpoints, $width);
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
 
-          @if $type==min {
-               // $width: $width - 1px;
-               $width: $width;
-          }
+    @if $type==min {
+      // $width: $width - 1px;
+      $width: $width;
+    }
 
-          @media only screen and (#{$type}-width: $width) {
-               @content;
-          }
-     }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
 }
 
 //////////////////////////////////////////////
@@ -172,35 +173,31 @@ $breakpoints: ('xs': 0,
 //////////////////////////////////////////////
 
 @mixin text-shorten {
-     overflow: hidden;
-     text-overflow: ellipsis;
-     white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
 
 @mixin ellipse-rows($num) {
-     overflow: hidden;
-     text-overflow: ellipsis;
-     display: -webkit-box;
-     -webkit-line-clamp: $num;
-     -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
 }
-
 
 // Animation Mixins
 
-
 @mixin pulse-ani($name, $color) {
-     animation: $name 2s infinite;
+  animation: $name 2s infinite;
 
-     @keyframes #{$name} {
-          0% {
-               box-shadow: 0 0 0 0px $color;
-          }
+  @keyframes #{$name} {
+    0% {
+      box-shadow: 0 0 0 0px $color;
+    }
 
-          100% {
-               box-shadow: 0 0 0 15px $color;
-          }
-     }
+    100% {
+      box-shadow: 0 0 0 15px $color;
+    }
+  }
 }
-
