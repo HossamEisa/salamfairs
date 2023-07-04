@@ -1,0 +1,67 @@
+.fancy-list-ticket-item {
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  @include mq("lg") {
+    border-radius: 0;
+    overflow: visible;
+  }
+  &-icon {
+    background: var(--main-color);
+    flex: 0 0 auto;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: var(--white);
+    @include mq("md") {
+      width: 150px;
+      font-size: 60px;
+    }
+    @include mq("lg") {
+      width: 50px;
+      font-size: 26px;
+    }
+    &.green {
+      background-color: var(--main-color);
+    }
+    &.mint {
+      background-color: var(--mint-green);
+    }
+    &.dark {
+      background-color: #58595b;
+    }
+  }
+
+  &-box {
+    background-color: #fff;
+    padding: 20px;
+    flex: 1 0 0%;
+  }
+  &-title {
+    color: var(--main-color);
+    font-size: calcRem(18);
+    margin-top: 0;
+    font-weight: 400;
+    font-family: $font-h;
+  }
+  &-text {
+    font-size: 13px;
+    line-height: 24px;
+    color: #424242;
+    margin-top: 5px;
+    small {
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+
+  a {
+    color: var(--main-color);
+    font-size: 13px;
+    &:hover {
+      color: var(--mint-green);
+    }
+  }
+}

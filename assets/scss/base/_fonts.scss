@@ -40,6 +40,13 @@
     url("../fonts/DINNextLTArabic-Bold.ttf")
   );
 }
+@font-face {
+  font-family: toggleFont("Cairo-Bold", "DINNextLTArabic-Heavy");
+  src: toggleFont(
+    url("../fonts/Cairo-Bold.ttf"),
+    url("../fonts/DINNextLTArabic-Heavy.ttf")
+  );
+}
 
 
 .font-sb {

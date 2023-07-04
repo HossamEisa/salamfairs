@@ -61,7 +61,7 @@
   text-align: center;
   width: auto;
   max-width: 100%;
-  bottom: 150px;
+  bottom: 20px;
   #{$right}: 10px;
   z-index: 4;
   @include mq("lg") {
@@ -81,5 +81,212 @@
   .hashtag-sub {
     color: #fff;
     text-align: #{$right};
+  }
+}
+
+.museums-sera {
+  min-height: 100vh;
+  padding: calcRem(40) 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include mq("xl") {
+    padding: calcRem(80) 0;
+  }
+  > div {
+    position: relative;
+    z-index: 2;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/star-ma.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .main-img {
+    max-width: 100%;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    @include mq("xl") {
+      width: 500px;
+    }
+  }
+  &-title {
+    font-weight: 600;
+    color: #383938;
+    line-height: calcRem(56);
+    font-size: calcRem(40);
+    margin-bottom: calcRem(30);
+  }
+  &-area {
+    font-weight: 600;
+    color: var(--main-color);
+    line-height: calcRem(30);
+    font-size: calcRem(25);
+    margin-bottom: calcRem(30);
+  }
+  &-text {
+    font-weight: 600;
+    color: #383938;
+    line-height: 1.4;
+    font-size: calcRem(15);
+  }
+  &-btn {
+    font-size: calcRem(26);
+    fill: #fff;
+    background-color: transparent;
+    background-image: linear-gradient(240deg, #1db05d 0%, #109d91 100%);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--e-global-color-astglobalcolor0);
+    border-radius: 50px 50px 50px 50px;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+    font-weight: bold;
+    padding: 20px 40px;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: calcRem(60);
+    &:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+  }
+}
+
+//museums-gallery
+
+.museums-gallery {
+  background-color: transparent;
+  background-image: linear-gradient(
+    220deg,
+    var(--mint-green) 0%,
+    var(--main-color) 100%
+  );
+  padding: calcRem(40) 0;
+  @include mq('xl') {
+    min-height: 100vh;
+  }
+  .row {
+    @include mq('xl') {
+      min-height: 100vh;
+    }
+  }
+  &-title {
+    font-weight: 600;
+    font-size: calcRem(42);
+    line-height: calcRem(53);
+    color: #fff;
+  }
+  &-sub {
+    color: #fff;
+    font-family: $font-l;
+    font-size: calcRem(22);
+  }
+}
+
+.gallery-carousel {
+  margin-top: 40px;
+
+  .swiper-slide {
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    a {
+      height: 100%;
+      display: block;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      min-height: 300px;
+      transition: 0.5s ease-in-out;
+
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: rgba(6, 6, 6, 0.4);
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+        visibility: hidden;
+      }
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  div[class^="swiper-button"] {
+    border-radius: 100px;
+    width: calcRem(60);
+    height: calcRem(60);
+    line-height: calcRem(60);
+    font-size: calcRem(24);
+    background-color: #ffffff3b;
+    color: #0000009e;
+    transition: 0.4s ease;
+    &::after {
+      font-size: 0;
+    }
+    &:hover {
+      background-color: var(--main-color);
+      color: var(--white);
+    }
+    @at-root body[dir="ltr"] & {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+}
+
+
+.museums-invite{
+  padding: 20px 0;
+  &-title {
+    font-size: calcRem(50);
+    color: var(--main-color);
+    font-weight: 600;
+    border: 0;
+    border-bottom: 10px solid;
+    border-image: linear-gradient(to right,#54595F11,#54595F) 1;
+  }
+  &-sub {
+    font-size: calcRem(26);
+    color: #54595f;
+    font-weight: 600;
+  }
+  &-text {
+    font-family: $font-l;
+  }
+  .btn {
+    margin-top: 20px;
   }
 }

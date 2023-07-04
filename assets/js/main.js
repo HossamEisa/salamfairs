@@ -102,7 +102,7 @@ var newsDetailsCarousel = new Swiper(".news-details-carousel", {
 });
 
 // meusemSwiper
-meusemSwiper
+
 
 // Init News Details Page  Carosuel
 var meusemSwiper = new Swiper(".meusemSwiper", {
@@ -118,5 +118,36 @@ var meusemSwiper = new Swiper(".meusemSwiper", {
   navigation: {
     nextEl: ".meusemSwiper .swiper-button-next",
     prevEl: ".meusemSwiper .swiper-button-prev",
+  },
+});
+
+
+// Init gallery-carousel   Carosuel
+var galleryCarousel  = new Swiper(".gallery-carousel", {
+  speed: 800,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  pagination: {
+    el: ".gallery-carousel .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".gallery-carousel .swiper-button-next",
+    prevEl: ".gallery-carousel .swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
+    },
   },
 });
