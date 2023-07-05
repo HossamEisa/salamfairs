@@ -371,7 +371,7 @@
     position: absolute;
     top: calcRem(100);
     width: 100%;
-    #{$right}: -calcRem(40);
+    #{$right}: -40px;
 
     @include mq("lg") {
       --e-transform-translateY: -60px;
