@@ -76,11 +76,14 @@
       font-size: calcRem(33);
       font-weight: 600;
       font-family: bukra-bold;
+      margin-bottom: 0;
     }
   }
   .hashtag-sub {
     color: #fff;
     text-align: #{$right};
+    font-size: calcRem(25);
+    font-family: $font-b;
   }
 }
 
@@ -168,6 +171,11 @@
       transform: scale(1.2);
     }
   }
+  &.no-bk {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 //museums-gallery
@@ -180,11 +188,11 @@
     var(--main-color) 100%
   );
   padding: calcRem(40) 0;
-  @include mq('xl') {
+  @include mq("xl") {
     min-height: 100vh;
   }
   .row {
-    @include mq('xl') {
+    @include mq("xl") {
       min-height: 100vh;
     }
   }
@@ -201,7 +209,8 @@
   }
 }
 
-.gallery-carousel {
+.gallery-carousel,
+.gallery-carousel-madina {
   margin-top: 40px;
 
   .swiper-slide {
@@ -218,7 +227,6 @@
       height: 100%;
       min-height: 300px;
       transition: 0.5s ease-in-out;
-
     }
     &::after {
       position: absolute;
@@ -266,9 +274,10 @@
     }
   }
 }
-
-
-.museums-invite{
+.gallery-carousel-madina {
+  padding: calcRem(100) 0;
+}
+.museums-invite {
   padding: 20px 0;
   &-title {
     font-size: calcRem(50);
@@ -276,17 +285,98 @@
     font-weight: 600;
     border: 0;
     border-bottom: 10px solid;
-    border-image: linear-gradient(to right,#54595F11,#54595F) 1;
+    border-image: linear-gradient(to right, #54595f11, #54595f) 1;
   }
   &-sub {
-    font-size: calcRem(26);
+    font-size: calcRem(36);
     color: #54595f;
     font-weight: 600;
+    font-family: $font-l;
   }
   &-text {
     font-family: $font-l;
+    font-size: calcRem(24);
   }
   .btn {
     margin-top: 20px;
+  }
+}
+.meseums-sera-madina-wrapper {
+  position: relative;
+  padding: calcRem(100) calcRem(80) calcRem(40);
+  @include mq("lg") {
+    padding: calcRem(40) calcRem(0);
+  }
+}
+.meseums-sera-madina-images {
+  --e-transform-rotateZ: 18deg;
+  --e-transform-rotateX: 9deg;
+  --e-transform-perspective: 323px;
+  --e-transform-rotateY: -16deg;
+  --e-transform-translateX: -70px;
+  --e-transform-translateY: -93px;
+  --e-transform-skewX: -1deg;
+  --e-transform-skewY: -1deg;
+
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  @include mq("lg") {
+    right: calcRem(50);
+  }
+  @include mq("xl") {
+    right: calcRem(50);
+    --e-transform-translateX: -80px;
+    --e-transform-translateY: -93px;
+  }
+  transform: perspective(var(--e-transform-perspective, 0))
+    rotate(var(--e-transform-rotateZ, 0)) rotateX(var(--e-transform-rotateX, 0))
+    rotateY(var(--e-transform-rotateY, 0))
+    translate(var(--e-transform-translate, 0))
+    translateX(var(--e-transform-translateX, 0))
+    translateY(var(--e-transform-translateY, 0))
+    scaleX(
+      calc(
+        var(--e-transform-flipX, 1) *
+          var(--e-transform-scaleX, var(--e-transform-scale, 1))
+      )
+    )
+    scaleY(
+      calc(
+        var(--e-transform-flipY, 1) *
+          var(--e-transform-scaleY, var(--e-transform-scale, 1))
+      )
+    )
+    skewX(var(--e-transform-skewX, 0)) skewY(var(--e-transform-skewY, 0));
+
+  img {
+    width: 200px;
+    max-width: 100%;
+    height: 300px;
+    transition-duration: 1.3s;
+    box-shadow: 13px -2px 12px -1px rgba(0, 0, 0, 0.23);
+    @include mq("lg") {
+      width: 256px;
+    }
+    @include mq("xl") {
+      height: 100%;
+      width: 256px;
+      max-height: 400px;
+    }
+  }
+
+  &.two {
+    --e-transform-translateY: -60px;
+    --e-transform-translateX: -40px;
+    position: absolute;
+    top: calcRem(100);
+    width: 100%;
+    #{$right}: -calcRem(40);
+
+    @include mq("lg") {
+      --e-transform-translateY: -60px;
+      --e-transform-translateX: -40px;
+      #{$right}: 0px;
+    }
   }
 }

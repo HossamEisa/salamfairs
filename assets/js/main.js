@@ -131,10 +131,6 @@ var galleryCarousel  = new Swiper(".gallery-carousel", {
     delay: 5000,
   },
   loop: true,
-  pagination: {
-    el: ".gallery-carousel .swiper-pagination",
-    clickable: true,
-  },
   navigation: {
     nextEl: ".gallery-carousel .swiper-button-next",
     prevEl: ".gallery-carousel .swiper-button-prev",
@@ -151,3 +147,28 @@ var galleryCarousel  = new Swiper(".gallery-carousel", {
     },
   },
 });
+
+// Init gallery-carousel   Carosuel
+var galleryCarousel  = new Swiper(".gallery-carousel-madina", {
+  speed: 800,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+
+  navigation: {
+    nextEl: ".gallery-carousel-madina .swiper-button-next",
+    prevEl: ".gallery-carousel-madina .swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
+});
+
