@@ -31,7 +31,7 @@ function DrawPlaceholder() {
         DrawName();
         DrawDate();
     };
-    img.src = 'img/invitation-ksa.webp';
+    img.src = '../../assets/img/invitation-ksa.webp';
 }
 
 function setDefaultText() {
