@@ -172,3 +172,23 @@ var galleryCarousel  = new Swiper(".gallery-carousel-madina", {
   },
 });
 
+
+
+
+// Init targets-carousel
+var targetsCarousel  = new Swiper(".targets-carousel", {
+  speed: 800,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  navigation: {
+    nextEl: ".targets-carousel .swiper-button-next",
+    prevEl: ".targets-carousel .swiper-button-prev",
+  },
+
+});
+
+

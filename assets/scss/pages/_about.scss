@@ -1,87 +1,222 @@
 .about-page {
-    background-color: transparent;
-    min-height: 100%;
-    background-color: #0000003d;
-    background-image: url("../img/reception22.webp");
-    background-size: cover;
-    background-position: top left;
-    background-repeat: no-repeat;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    background-attachment: fixed;
-    position: relative;
-    padding: 80px 0 40px;
+  background-color: transparent;
+  min-height: 100%;
+  background-color: #0000003d;
+  background-image: url("../img/reception22.webp");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  background-attachment: fixed;
+  position: relative;
+  padding: 80px 0 40px;
   @include mq("lg") {
     padding: 120px 0;
   }
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: transparent;
-      background-image: linear-gradient(180deg, #000000D4 0%, #0000003D 100%);
-      opacity: 0.67;
-      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #000000d4 0%, #0000003d 100%);
+    opacity: 0.67;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-box {
+    background-color: rgb(235 232 232);
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    min-height: 255px;
+    height: 100%;
+
+    i {
+      font-size: 50px;
+      color: var(--mint-green);
     }
-    > * {
-      position: relative;
-      z-index: 2;
-    }
-  
-    &-box {
-      background-color: rgb(235 232 232);
-      padding: calcRem(50);
-      &-title {
-        i {
-          font-size: 50px;
-          margin-bottom: 7px;
-        }
-        margin-top: 25px;
-        text-align: center;
+    &-title {
+      margin-top: 15px;
+      text-align: center;
+      color: var(--mint-green);
+      font-size: 25px;
+      font-family: $font-b;
+      a {
         color: var(--mint-green);
-        font-size: 25px;
-        font-family: $font-b;
-        h2 {
-          font-size: 25px;
-        }
-        a {
-          color: var(--mint-green);
-          text-decoration: none;
-        }
+        text-decoration: none;
       }
-      &-text {
-        margin-top: 20px;
-        font-size: 15px;
-        text-align: justify;
-      }
-  
-      &.mobile {
-        background-color: transparent;
-        @include mq("md") {
-          background-color: rgb(235 232 232);
-        }
-        .billion-campaign-page-box-title {
-          background-color: rgb(235 232 232);
-          padding: 15px;
-        }
+    }
+    &-text {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: center;
+    }
+    &.green {
+      background-color: transparent;
+      background-image: linear-gradient(240deg, #1db05df2 0%, #109d91f2 100%);
+      color: #fff;
+      i,
+      .about-page-box-title {
+        color: #fff;
       }
     }
   }
-  
-  .about-page-overlay {
-    position: relative;
-    text-align: $left;
-    padding: 20px 0;
-    img {
-      object-fit: contain;
-      opacity: 0.5;
-      width: 400px;
-      max-width: 100%;
+}
+
+.about-page-overlay {
+  position: relative;
+  text-align: $left;
+  padding: 20px 0;
+  img {
+    object-fit: contain;
+    opacity: 0.5;
+    width: 400px;
+    max-width: 100%;
+  }
+}
+
+.targests-block {
+  background-color: rgb(235 232 232);
+  &-icon {
+    font-size: 50px;
+    color: var(--mint-green);
+  }
+  &-title {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--mint-green);
+    font-size: 25px;
+    font-family: $font-b;
+  }
+  &-col {
+    border-#{$left}: 1px dashed #ccc;
+  }
+}
+
+.targets-carousel {
+  color: #54595f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  span {
+    font-size: 14px;
+    color: #000;
+    font-family: $font-b;
+  }
+  hr {
+    margin: 5px 0;
+  }
+  .swiper-slide {
+    padding: 10px;
+
+    &-text {
+      padding: 15px 45px;
     }
   }
 
+  div[class^="swiper-button"] {
+    background: none;
+    font-size: 48px;
+    color: #0a0a0a36;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.about-ul-container {
+  background-color: rgb(235 232 232);
+  padding: 15px;
+  @include mq("xl") {
+    padding: 0 10px;
+  }
+  .about-list-title {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--mint-green);
+    font-size: 30px;
+    font-family: $font-b;
+  }
+  .about-list-icon {
+    font-size: 50px;
+    color: var(--mint-green);
+  }
+}
+.about-list-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  i {
+    color: #393939;
+    width: 1.25em;
+    font-size: 10px;
+  }
+  li {
+    font-size: 16px;
+    color: #54595f;
+    padding-#{$right}: 5px;
+    margin-top: 5px;
+  }
+}
+
+.dashed-border-end {
+  border-#{$left}: 1px dashed #ccc;
+}
+
+.about-international-museums {
+  @include mq("lg") {
+    background-color: rgb(235 232 232);
+  }
+  &-icon {
+    font-size: 50px;
+    color: var(--mint-green);
+  }
+  &-title {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--mint-green);
+    font-size: 25px;
+    font-family: $font-b;
+  }
+  &-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-#{$left}: 1px dashed #ccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &:last-child {
+      border: none;
+    }
+    &-text {
+      font-size: 16px;
+    }
+
+    a {
+      color: var(--main-color);
+      font-size: 16px;
+      font-weight: 600;
+      &:hover {
+        color: var(--mint-green);
+      }
+    }
+  }
+  &-box {
+    background-color: rgb(235 232 232);
+    padding: 15px;
+    @include mq("lg") {
+      background-color: transparent;
+      padding: 0px;
+    }
+  }
+}
