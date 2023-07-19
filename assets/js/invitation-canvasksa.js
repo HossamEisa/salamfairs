@@ -31,7 +31,7 @@ function DrawPlaceholder() {
         DrawName();
         DrawDate();
     };
-    img.src = 'img/invitation.webp';
+    img.src = 'img/invitation-ksa.webp';
 }
 
 function setDefaultText() {
@@ -139,7 +139,7 @@ function share_whatsapp(msg) {
 
 function share_twitter(msg, uid) {
     let link_twitter = document.createElement('a');
-    link_twitter.href = "https://twitter.com/intent/tweet?text="+msg+"&hashtags=السيرة_كأنك_تراها&url=https://invitation.ma.salamfairs.com.sa/"+uid.trim();
+    link_twitter.href = "https://twitter.com/intent/tweet?text="+msg+"&hashtags=السيرة_كأنك_تراها&url=https://invitation.salamfairs.com.sa/"+uid.trim();
     link_twitter.click();
 }
 
@@ -183,13 +183,13 @@ $('.download-image').on('click', function (){
         // unblock when ajax activity stops
         $(document).ajaxStop($.unblockUI);
 
-        $.blockUI({ message: '<img src="../../assets/img/load.svg" />', overlayCSS: { backgroundColor: '#0e9c8c' } });
+        $.blockUI({ message: '<img src="../img/load.svg" />', overlayCSS: { backgroundColor: '#0e9c8c' } });
 
         var dataURL = canvas.toDataURL("image/jpeg");
         $.ajax({
             method: "POST",
             dataType: "json",
-            url: "../../save_inv.php",
+            url: "../save_inv.php",
             data: {
                 secret_key: 'ISMAIL@84#Shabbir#SALAMFAIRS',
                 from: your_name,
@@ -210,8 +210,8 @@ $('.download-image').on('click', function (){
                     let line2 = "يمكنكم مشاهدة وتحميل البطاقة عبر زيارة الرابط التالي:";
                     let line3 ="ولمعرفة أروع سيرة يمكنكم حجز تذاكر الزيارة عبر الموقع الإلكتروني:";
                     let uid = res.uid;
-                    let encode_url = encodeURIComponent("https://invitation.ma.salamfairs.com.sa/" + uid);
-                    let encode_url_ticket = encodeURIComponent("https://tickets.ma.salamfairs.com.sa");
+                    let encode_url = encodeURIComponent("https://invitation.salamfairs.com.sa/" + uid);
+                    let encode_url_ticket = encodeURIComponent("https://tickets.salamfairs.com.sa");
                     let new_line = "%0A";
 
                     console.log("BTN: " + selectedBtn);
