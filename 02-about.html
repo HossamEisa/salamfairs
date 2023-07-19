@@ -377,123 +377,29 @@
         </div>
       </header>
       <!-- Start Main -->
-      <main class="invitation-card">
-        <div class="container">
-          <div class="invitation-card-content">
+      <main class="about-page">
+        <section>
+          <div class="container">
+            <h1 class="banner-title">عن المتاحف</h1>
+            <p class="banner-subtitle">
+              المتحف الدولي للسيرة النبوية يُعنى بالتعريف الحضاري الشامل بالنبي
+              ﷺ، وآدابه الكريمة، وأخلاقه العظيمة، وشريعته السمحة، عبر أحدث
+              التقنيات، تحت إشراف رابطة العالم الإسلامي
+            </p>
+
             <div class="row">
-              <div class="col-md-6">
-                <div class="text-center pt-5">
-                  <h2 class="invitation-card-content-title">ادع من تحب</h2>
-                  <p class="invitation-card-content-text">
-                    بإمكانك دعوة من تحب وإرسال بطاقة دعوة لهم
-                  </p>
-                </div>
-
-                <div class="mb-3">
-                  <label for="text" class="form-label"
-                    >يمكنكم التعبير عن هذه التجربة المميزة، كما يتاح لكم تعديل
-                    النص الإفتراضي، ويمكنك كتابة أكثر من سطر بالنزول لسطر
-                    جديد</label
-                  >
-                  <textarea
-                    class="form-control"
-                    rows="4"
-                    id="text"
-                    aria-describedby="text"
-                    name="text"
-                    placeholder="يمكنكم التعبير عن هذه التجربة المميزة، كما يتاح لكم تعديل النص الإفتراضي، ويمكنك كتابة أكثر من سطر بالنزول لسطر جديد"
-                    maxlength="150"
-                    minlength="6"
-                    wrap="hard"
-                    required=""
-                  ></textarea>
-                  <div>
-                    <span id="total">129/150</span>
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label class="form-label" for="h-name"
-                    >في حال تحب ترسل الدعوة لشخص معين يمكنك كتابة اسمه أو دعه
-                    فارغا</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="h-name"
-                    aria-describedby="h-name"
-                    name="h-name"
-                    placeholder="اسم من ترغب في دعوته"
-                    maxlength="40"
-                    minlength="2"
-                    autocomplete="off"
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    aria-describedby="name"
-                    name="name"
-                    placeholder="اسمك"
-                    maxlength="35"
-                    minlength="2"
-                    autocomplete="off"
-                    required=""
-                  />
-                </div>
-
-                <div class="mt-2 error">
-                  <span id="errors" class="text-danger"></span>
-                </div>
-              </div>
-              <!--Canvas-->
-              <div class="col-md-6">
-                <div id="canvas-wrap">
-                  <canvas
-                    dir="rtl"
-                    style="display: block; width: 100%; height: 100%"
-                    id="imageCanvas"
-                    width="1080"
-                    height="1080"
-                  >
-                    <canvas id="canvasID"></canvas>
-                  </canvas>
-                </div>
-
-                <div
-                  class="d-flex justify-content-center align-items-center"
-                  style="margin-top: 20px; text-align: center"
-                >
-                  <button
-                    id="download-image"
-                    data-btn-name="whatsapp"
-                    class="btn btn-primary btn-lg mr-1 ml-1 download-image"
-                  >
-                    <i class="fab fa-whatsapp"></i>
-                  </button>
-                  <button
-                    id="download-image"
-                    data-btn-name="twitter"
-                    class="btn btn-primary btn-lg mr-1 ml-1 download-image"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </button>
-
-                  <button
-                    id="download-image"
-                    data-btn-name="download"
-                    class="btn btn-primary btn-lg mr-1 ml-1 download-image"
-                  >
-                    <i class="fas fa-download"></i>
-                  </button>
+              <div class="col-md-6 mb-2">
+                <div class="about-page-box mt-0">
+                  <i aria-hidden="true" class="far fa-eye"></i>
+                  <h2>الرؤية</h2>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="about-page-overlay">
+          <img src="./assets/img/pattern-white.png" alt="overlay" />
+        </section>
       </main>
       <!-- End Main -->
       <!-- Start Footer -->
@@ -611,7 +517,7 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="assets/js/aos.js"></script>
-    // <script src="assets/js/blockUI.js"></script>
+    <script src="assets/js/blockUI.js"></script>
     <script src="assets/js/invitation-canvasksa.js"></script>
 
     <!-- Main JavaScript -->
