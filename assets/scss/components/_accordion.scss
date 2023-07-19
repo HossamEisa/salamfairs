@@ -1,0 +1,40 @@
+.custom-accordion {
+  .accordion-item {
+    border-bottom: 1px solid #e9e8e8 !important;
+    padding: 10px 0;
+
+    .accordion-header {
+      font-family: $font-b;
+      line-height: calcRem(20);
+      font-weight: 600;
+      font-size: calcRem(20);
+      color: #58595b;
+      padding: calcRem(15);
+      user-select: none;
+      &::before {
+        content: "\2b";
+        display: inline-block;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+      }
+      &:not(.collapsed) {
+        color: var(--main-color);
+
+        &::before {
+          content: "\f068";
+        }
+      }
+    }
+    .accordion-body {
+      color: #58595b;
+      line-height: 1.25em;
+      h6 {
+        font-weight: 600;
+      }
+    }
+
+    a {
+      color: var(--main-color);
+    }
+  }
+}

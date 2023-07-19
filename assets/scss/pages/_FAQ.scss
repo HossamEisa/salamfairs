@@ -1,0 +1,14 @@
+.faq-list {
+  &-title {
+    color: var(--main-color);
+    font-family: $font-b;
+    font-size: calcRem(30);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: calcRem(35);
+    &::before {
+        content: ":::";
+        margin-inline-end: 5px;
+    }
+  }
+}
