@@ -61,7 +61,7 @@ function DynamicText(img) {
 function DrawText() {
     ctx.fillStyle = 'rgba(238,238,238,0.95)';
     ctx.textBaseline = 'middle';
-    ctx.font = "30px 'DIN-REGULAR'";
+    ctx.font = "30px 'DINNextLTArabic-Regular'";
 
     var lines = your_text.split("\n");
     ctx.textAlign = "right";
@@ -84,7 +84,7 @@ function DrawText() {
 function DrawHName() {
     ctx.fillStyle = 'rgb(255,255,255)';
     ctx.textBaseline = 'middle';
-    ctx.font = "35px 'DIN-BOLD'";
+    ctx.font = "35px 'DINNextLTArabic-BOLD'";
     ctx.textAlign = "right";
     ctx.fillText(your_h_name, 948, 395);
 }
@@ -92,7 +92,7 @@ function DrawHName() {
 function DrawName() {
     ctx.fillStyle = 'rgb(255,255,255)';
     ctx.textBaseline = 'middle';
-    ctx.font = "23px 'DIN-LIGHT'";
+    ctx.font = "23px 'DDINNextLTArabicIN-LIGHT'";
     ctx.textAlign = "right";
 
     if(your_name != '') {
@@ -104,7 +104,7 @@ function DrawName() {
 function DrawDate() {
     ctx.fillStyle = 'rgb(255,255,255)';
     ctx.textBaseline = 'middle';
-    ctx.font = "23px 'DIN-LIGHT'";
+    ctx.font = "23px 'DINNextLTArabic-LIGHT'";
     ctx.textAlign = "right";
     ctx.fillText(fullDate, 948, (pos_y + 90));
 }
@@ -183,7 +183,7 @@ $('.download-image').on('click', function (){
         // unblock when ajax activity stops
         $(document).ajaxStop($.unblockUI);
 
-        $.blockUI({ message: '<img src="../img/load.svg" />', overlayCSS: { backgroundColor: '#0e9c8c' } });
+        $.blockUI({ message: '<img src="../../assets/img/load.svg" />', overlayCSS: { backgroundColor: '#0e9c8c' } });
 
         var dataURL = canvas.toDataURL("image/jpeg");
         $.ajax({
