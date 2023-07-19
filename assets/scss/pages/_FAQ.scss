@@ -7,8 +7,13 @@
     text-decoration: none;
     margin-bottom: calcRem(35);
     &::before {
-        content: ":::";
-        margin-inline-end: 5px;
+      content: ":::";
+      margin-inline-end: 5px;
     }
+  }
+  font-size: 15px;
+  h6 {
+    font-size: 15px;
+    font-weight: 600;
   }
 }
