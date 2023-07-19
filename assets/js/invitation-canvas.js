@@ -31,7 +31,7 @@ function DrawPlaceholder() {
         DrawName();
         DrawDate();
     };
-    img.src = '/assets/img/invitation.webp';
+    img.src = './invitation.webp';
 }
 
 function setDefaultText() {
