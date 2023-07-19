@@ -198,9 +198,7 @@
     &:last-child {
       border: none;
     }
-    &-text {
-      font-size: 16px;
-    }
+ 
 
     a {
       color: var(--main-color);
@@ -218,5 +216,10 @@
       background-color: transparent;
       padding: 0px;
     }
+    &-text {
+        font-size: 16px;
+        margin-top: 15px;
+        color: #54595f;
+      }
   }
 }
