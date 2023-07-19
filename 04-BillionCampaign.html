@@ -377,123 +377,90 @@
         </div>
       </header>
       <!-- Start Main -->
-      <main class="invitation-card">
-        <div class="container">
-          <div class="invitation-card-content">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="text-center pt-5">
-                  <h2 class="invitation-card-content-title">ادع من تحب</h2>
-                  <p class="invitation-card-content-text">
-                    بإمكانك دعوة من تحب وإرسال بطاقة دعوة لهم
-                  </p>
-                </div>
+      <main class="billion-campaign-page pb-5">
+        <section class="pt-5">
+          <div class="container">
+            <h1 class="banner-title">حملة المليار</h1>
+            <p class="banner-subtitle">
+              نهدف إلى توزيع مليار نسخة من كتاب السيرة النبوية في دقائق حول
+              العالم بلغات مختلفة.
+            </p>
 
-                <div class="mb-3">
-                  <label for="text" class="form-label"
-                    >يمكنكم التعبير عن هذه التجربة المميزة، كما يتاح لكم تعديل
-                    النص الإفتراضي، ويمكنك كتابة أكثر من سطر بالنزول لسطر
-                    جديد</label
-                  >
-                  <textarea
-                    class="form-control"
-                    rows="4"
-                    id="text"
-                    aria-describedby="text"
-                    name="text"
-                    placeholder="يمكنكم التعبير عن هذه التجربة المميزة، كما يتاح لكم تعديل النص الإفتراضي، ويمكنك كتابة أكثر من سطر بالنزول لسطر جديد"
-                    maxlength="150"
-                    minlength="6"
-                    wrap="hard"
-                    required=""
-                  ></textarea>
-                  <div>
-                    <span id="total">129/150</span>
+            <div class="billion-campaign-page-box mb-2">
+              <div class="text-center">
+                <img
+                  loading="lazy"
+                  src="./assets/img/books.webp"
+                  alt="books"
+                  class="img-fluid w-75"
+                />
+              </div>
+
+              <div class="billion-campaign-page-box-title">
+                <i aria-hidden="true" class="fas fa-book-open"></i>
+                <h2>عن الكُتيِّب</h2>
+              </div>
+              <p class="billion-campaign-page-box-text">
+                كُتيِّب جيبيّ صغير الحجم عظيم الفائدة، يشتمل على السيرة النبوية
+                الشريفة، بأسلوب سهل ولغة معاصرة وتبويب شيق وعنونة جذابة، اشتمل
+                على عرض موجز عن سير الأنبياء عليهم الصلاة والسلام، ثم عرض موجز
+                لسيرة النبي ﷺ ومسيرته، ولكريم آدابه ولطائف أخلاقه وروائع شمائله
+                ودلائل نبوّته ﷺ. كما اشتمل على عرض موجز لأركان الإسلام ومبادئه
+                العظيمة، وتعاليمه السمحة. وهو كتيب تمَّ تدقيقه تدقيقًا علميًّا
+                محكَمًا، وضبطه بالشكل ضبطًا كاملًا، وقد صيغ بأسلوب أدبي جميل،
+                وحظي بقراءة ومراجعة أكثر من (300) ثلاثمائة عالِم وباحث متخصص،
+                وبتوقيع أكثر من (50) خمسين مفتيًا وعالمًا من كبار علماء المسلمين
+                حول العالَم. وتُرجم إلى أكثر من (25) خمسٍ وعشرين لغة، وهو الأكثر
+                مبيعًا في كل معارض ومتاحف السيرة النبوية العالمية .
+              </p>
+            </div>
+
+            <div class="billion-campaign-page-box mobile p-0">
+              <div class="row">
+                <div class="col-md mb-2">
+                  <div class="billion-campaign-page-box-title mt-0">
+                    <i aria-hidden="true" class="fas fa-shopping-basket"></i>
+                    <h2>
+                      <a href="/"> اطلب الآن </a>
+                    </h2>
+
+                    <div class="campaign-social">
+                      <a
+                        href="https://oswa.com.sa/search?q=%D8%A7%D9%84%D8%B3%D9%8A%D8%B1%D8%A9+%D8%A7%D9%84%D9%86%D8%A8%D9%88%D9%8A%D8%A9+%D9%81%D9%8A+%D8%AF%D9%82%D8%A7%D8%A6%D9%82"
+                        class="uc_social-button"
+                      >
+                        <i class="fas fa-shopping-cart"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
-
-                <div class="mb-3">
-                  <label class="form-label" for="h-name"
-                    >في حال تحب ترسل الدعوة لشخص معين يمكنك كتابة اسمه أو دعه
-                    فارغا</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="h-name"
-                    aria-describedby="h-name"
-                    name="h-name"
-                    placeholder="اسم من ترغب في دعوته"
-                    maxlength="40"
-                    minlength="2"
-                    autocomplete="off"
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    aria-describedby="name"
-                    name="name"
-                    placeholder="اسمك"
-                    maxlength="35"
-                    minlength="2"
-                    autocomplete="off"
-                    required=""
-                  />
-                </div>
-
-                <div class="mt-2 error">
-                  <span id="errors" class="text-danger"></span>
-                </div>
-              </div>
-              <!--Canvas-->
-              <div class="col-md-6">
-                <div id="canvas-wrap">
-                  <canvas
-                    dir="rtl"
-                    style="display: block; width: 100%; height: 100%"
-                    id="imageCanvas"
-                    width="1080"
-                    height="1080"
-                  >
-                    <canvas id="canvasID"></canvas>
-                  </canvas>
-                </div>
-
-                <div
-                  class="d-flex justify-content-center align-items-center"
-                  style="margin-top: 20px; text-align: center"
-                >
-                  <button
-                    id="download-image"
-                    data-btn-name="whatsapp"
-                    class="btn btn-primary btn-lg mr-1 ml-1 download-image"
-                  >
-                    <i class="fab fa-whatsapp"></i>
-                  </button>
-                  <button
-                    id="download-image"
-                    data-btn-name="twitter"
-                    class="btn btn-primary btn-lg mr-1 ml-1 download-image"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </button>
-
-                  <button
-                    id="download-image"
-                    data-btn-name="download"
-                    class="btn btn-primary btn-lg mr-1 ml-1 download-image"
-                  >
-                    <i class="fas fa-download"></i>
-                  </button>
+                <div class="col-auto d-none d-md-block vr-line"></div>
+                <div class="col-md ">
+                  <div class="billion-campaign-page-box-title mt-0">
+                    <i aria-hidden="true" class="fas fa-luggage-cart"></i>
+                    <h2>
+                      <a href="/"> لطلب الكمِّيات </a>
+                    </h2>
+                    <div class="campaign-social">
+                      <a href="tel:+966920008397" class="uc_social-button"
+                        ><i class="fas fa-phone-alt"></i
+                      ></a>
+                      <a
+                        href="https://salamfairs.com.sa/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7/"
+                        class="uc_social-button"
+                        target="blank"
+                        ><i class="fas fa-envelope"></i
+                      ></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="campaign-overlay">
+          <img src="./assets/img/pattern-white.png" alt="overlay" />
+        </section>
       </main>
       <!-- End Main -->
       <!-- Start Footer -->
