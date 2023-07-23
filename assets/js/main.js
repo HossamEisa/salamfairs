@@ -30,6 +30,19 @@ AOS.init({
   once: true,
 });
 
+
+// Init HomePage Latest News Carosuel
+var heroCarousel = new Swiper(".hero-section-carousel ", {
+  speed: 800,
+  autoplay: {
+    delay: 15000,
+  },
+  pagination: {
+    el: ".hero-section-carousel  .swiper-pagination",
+    clickable: true,
+  },
+});
+
 // Init HomePage Latest News Carosuel
 var latestNewsCarousel = new Swiper(".latest-news-carousel ", {
   effect: "cube",
@@ -149,7 +162,7 @@ var galleryCarousel  = new Swiper(".gallery-carousel", {
 });
 
 // Init gallery-carousel   Carosuel
-var galleryCarousel  = new Swiper(".gallery-carousel-madina", {
+var galleryCarouselMadina  = new Swiper(".gallery-carousel-madina", {
   speed: 800,
   slidesPerView: 1,
   spaceBetween: 20,

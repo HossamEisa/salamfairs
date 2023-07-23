@@ -12,3 +12,12 @@ $direction: rtl !default;
  */
 $left: flip(right, left);
 $right: flip(left, right);
+
+
+
+.fa-long-arrow-alt-left {
+  @at-root body[dir="ltr"] & {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+}
