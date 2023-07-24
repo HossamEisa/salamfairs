@@ -111,7 +111,7 @@
         all: unset;
         color: #494c4f;
         font-size: 30px;
-        margin-right: auto;
+        margin-#{$right}: auto;
         display: block;
       }
       .navbar-collapse {
@@ -121,10 +121,9 @@
         position: fixed;
         top: 0;
         bottom: 0;
-        right: 0;
         overflow-y: auto;
         z-index: 21;
-        right: -100%;
+        #{$right}: -100%;
         transition: 0.6s ease;
         padding: 20px 20px 20px 20px;
         .mobile-main-menu-text {
@@ -205,7 +204,7 @@
         opacity: 1;
         visibility: visible;
         .navbar-collapse {
-          right: 0;
+          #{$right}: 0;
         }
       }
     }

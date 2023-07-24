@@ -1,0 +1,21 @@
+.meuseum-guide-section {
+  padding-bottom: 0;
+  &-card {
+    text-align: center;
+    &-image {
+      width: 100px;
+      margin-bottom: 20px;
+      @include mq("xl") {
+        width: 150px;
+      }
+    }
+    &-title {
+      color: #54595f;
+      font-family: $font-b;
+      font-size: calcRem(18);
+      @include mq("xl") {
+        font-size: calcRem(16);
+      }
+    }
+  }
+}
