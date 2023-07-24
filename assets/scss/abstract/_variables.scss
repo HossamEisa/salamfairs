@@ -1,13 +1,13 @@
 // Fonts
 
-$font-r: toggleFont(Poppins-Regular, DINNextLTArabic-Regular);
-$font-l: toggleFont(Poppins-Bold, DINNextLTArabic-Light);
-$font-b: toggleFont(Poppins-Bold, DINNextLTArabic-Bold);
-$font-h: toggleFont(Poppins-Bold, DINNextLTArabic-Heavy);
+$font-r: DINNextLTArabic-Regular;
+$font-l: DINNextLTArabic-Light;
+$font-b: DINNextLTArabic-Bold;
+$font-h: DINNextLTArabic-Heavy;
 
-$bukra-r: toggleFont(Poppins-Bold, bukra-regular);
-$bukra-m: toggleFont(Poppins-Bold, bukra-medium);
-$bukra-b: toggleFont(Poppins-Bold, bukra-bold);
+$bukra-r: bukra-regular;
+$bukra-m: bukra-medium;
+$bukra-b: bukra-bold;
 
 // Variables
 

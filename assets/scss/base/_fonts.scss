@@ -18,36 +18,23 @@
 }
 
 @font-face {
-  font-family: toggleFont("Cairo-Regular", "DINNextLTArabic-Regular");
-  src: toggleFont(
-    url("../fonts/Cairo-Regular.ttf"),
-    url("../fonts/DINNextLTArabic-Regular.ttf")
-  );
+  font-family: DINNextLTArabic-Regular;
+  src: url("../fonts/DINNextLTArabic-Regular.ttf");
 }
 
 @font-face {
-  font-family: toggleFont("Cairo-Regular", "DINNextLTArabic-Light");
-  src: toggleFont(
-    url("../fonts/Cairo-Regular.ttf"),
-    url("../fonts/DINNextLTArabic-Light.ttf")
-  );
+  font-family: DINNextLTArabic-Light;
+  src: url("../fonts/DINNextLTArabic-Light.ttf");
 }
 
 @font-face {
-  font-family: toggleFont("Cairo-Bold", "DINNextLTArabic-Bold");
-  src: toggleFont(
-    url("../fonts/Cairo-Bold.ttf"),
-    url("../fonts/DINNextLTArabic-Bold.ttf")
-  );
+  font-family: DINNextLTArabic-Bold;
+  src: url("../fonts/DINNextLTArabic-Bold.ttf")
 }
 @font-face {
-  font-family: toggleFont("Cairo-Bold", "DINNextLTArabic-Heavy");
-  src: toggleFont(
-    url("../fonts/Cairo-Bold.ttf"),
-    url("../fonts/DINNextLTArabic-Heavy.ttf")
-  );
+  font-family: DINNextLTArabic-Heavy;
+  src: url("../fonts/DINNextLTArabic-Heavy.ttf")
 }
-
 
 .font-sb {
   font-family: $font-b;
