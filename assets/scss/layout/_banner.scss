@@ -39,6 +39,12 @@
       margin-top: 20px;
     }
   }
+  &-subhead {
+    font-size: calcRem(27);
+    font-family: $font-b;
+    color: #f2f5f7;
+
+  }
   ul,
   ol {
     list-style: none;
@@ -95,5 +101,6 @@
       line-height: calcRem(45);
       margin-bottom: 25px;
     }
+    
   }
 }
