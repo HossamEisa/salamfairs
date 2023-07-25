@@ -108,7 +108,7 @@ function DrawDate() {
 
 document.getElementById('h-name').addEventListener('keyup', function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    your_h_name = "أدعوك " + this.value;
+    your_h_name = "invite " + this.value;
     DrawOverlay(img);
     DrawHName();
     DrawText();
