@@ -1,7 +1,6 @@
 var your_name = "";
 var your_h_name = "";
-var your_text = "لتجربة ممتعة وفريدة من نوعها في هذا الصرح الجليل، لمعرفة السيرة النبوية\n" +
-    "العطرة وكأنك تعيشها عن طريق أحدث التقنيات وأفضل الأساليب.";
+var your_text = "In publishing and graphic design commonly used to demonstrate\n" + "the visual form of a document or a typeface without ";
 
 var date = new Date();
 var fullDate = date.getDate() + " / " + (date.getMonth() + 1) + " / " + date.getFullYear();
@@ -64,7 +63,7 @@ function DrawText() {
     ctx.font = "30px 'DINNextLTArabic-Regular'";
 
     var lines = your_text.split("\n");
-    ctx.textAlign = "right";
+    ctx.textAlign = "left";
     for (var i = 0; i < lines.length; i++) {
         var y = your_h_name === '' ? 385 : 450
 
@@ -75,7 +74,7 @@ function DrawText() {
         } else {
             pos_y = y + i * 40;
         }
-        ctx.fillText(lines[i], 948, pos_y);
+        ctx.fillText(lines[i], 20, pos_y);
     }
 }
 
@@ -83,18 +82,18 @@ function DrawHName() {
     ctx.fillStyle = 'rgb(255,255,255)';
     ctx.textBaseline = 'middle';
     ctx.font = "35px 'DINNextLTArabic-BOLD'";
-    ctx.textAlign = "right";
-    ctx.fillText(your_h_name, 948, 395);
+    ctx.textAlign = "left";
+    ctx.fillText(your_h_name, 20, 395);
 }
 
 function DrawName() {
     ctx.fillStyle = 'rgb(255,255,255)';
     ctx.textBaseline = 'middle';
     ctx.font = "23px 'DDINNextLTArabicIN-LIGHT'";
-    ctx.textAlign = "right";
+    ctx.textAlign = "left";
 
     if (your_name != '') {
-        ctx.fillText(your_name, 948, (pos_y + 60));
+        ctx.fillText(your_name, 30, (pos_y + 60));
     }
 
 }
@@ -103,8 +102,8 @@ function DrawDate() {
     ctx.fillStyle = 'rgb(255,255,255)';
     ctx.textBaseline = 'middle';
     ctx.font = "23px 'DINNextLTArabic-LIGHT'";
-    ctx.textAlign = "right";
-    ctx.fillText(fullDate, 948, (pos_y + 90));
+    ctx.textAlign = "left";
+    ctx.fillText(fullDate, 30, (pos_y + 90));
 }
 
 document.getElementById('h-name').addEventListener('keyup', function () {
@@ -171,7 +170,7 @@ $('.download-image').on('click', function () {
         //     margin: 0,
         //     width: '30%',
         //     top: '20%',
-        //     right: '35%',
+        //     left: '35%',
         //     textAlign: 'center',
         //     cursor: 'wait'
         // };
