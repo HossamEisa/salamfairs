@@ -11,7 +11,7 @@
   position: relative;
   padding: 80px 0 40px;
   @include mq("lg") {
-    padding: 120px 0;
+    padding: 120px 0 50px;
   }
   &::after {
     content: "";
@@ -149,6 +149,9 @@
   .about-list-icon {
     font-size: 50px;
     color: var(--mint-green);
+    @at-root [dir="ltr"] & {
+      transform: rotate(180deg);
+    }
   }
 }
 .about-list-ul {
@@ -179,6 +182,7 @@
   &-icon {
     font-size: 50px;
     color: var(--mint-green);
+   
   }
   &-title {
     margin-top: 15px;
@@ -198,7 +202,6 @@
     &:last-child {
       border: none;
     }
- 
 
     a {
       color: var(--main-color);
@@ -217,9 +220,9 @@
       padding: 0px;
     }
     &-text {
-        font-size: 16px;
-        margin-top: 15px;
-        color: #54595f;
-      }
+      font-size: 16px;
+      margin-top: 15px;
+      color: #54595f;
+    }
   }
 }

@@ -1,0 +1,19 @@
+.fa-chevron-right,
+.fa-chevron-left,
+.fa-angle-right,
+.fa-angle-left {
+  @at-root {
+    [dir="ltr"] & {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.fa-comment {
+  @at-root {
+    [dir="ltr"] & {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+}
