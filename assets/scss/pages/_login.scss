@@ -1,0 +1,140 @@
+.login-page {
+  background-color: transparent;
+  min-height: 100%;
+  background: url(../img/banner-bg.png),
+    linear-gradient(90deg, #109d91 50%, #1db05d 100%);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 80px 0 40px;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  @include mq("lg") {
+    padding: 120px 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    top: 0;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #000000 0%, #000000 60%);
+    opacity: 0.2;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    z-index: 1;
+  }
+  > .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-wrapper {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+
+    @include mq("md") {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .title {
+      height: 90px;
+      background: #16a085;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    form {
+      padding: 30px 25px 25px 25px;
+      .row {
+        height: 45px;
+        margin-bottom: 15px;
+        position: relative;
+        input {
+          height: 100%;
+          width: 100%;
+          outline: none;
+          padding-#{$left}: 60px;
+          border-radius: 5px;
+          border: 1px solid lightgrey;
+          font-size: 16px;
+          transition: all 0.3s ease;
+          &:focus {
+            border-color: #16a085;
+            box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
+          }
+          &::placeholder {
+            color: #999;
+          }
+        }
+        i {
+          position: absolute;
+          width: 47px;
+          height: 100%;
+          color: #fff;
+          font-size: 18px;
+          background: #16a085;
+          border: 1px solid #16a085;
+          border-radius: 5px 0 0 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          #{$left}: 0;
+          @at-root body[dir="ltr"] & {
+            border-radius: 0 5px 5px 0;
+          }
+        }
+      }
+
+      .pass {
+        margin: -8px 0 20px 0;
+        a {
+          color: #16a085;
+          font-size: 17px;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .button {
+        input {
+          color: #fff;
+          font-size: 20px;
+          font-weight: 500;
+          padding-#{$left}: 0px;
+          background: #16a085;
+          border: 1px solid #16a085;
+          cursor: pointer;
+          &::hover {
+            background: #12876f;
+          }
+        }
+      }
+      .signup-link {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 17px;
+        a {
+          color: #16a085;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

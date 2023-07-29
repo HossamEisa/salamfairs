@@ -20,6 +20,8 @@
   --bs-btn-hover-bg: transparent;
   --bs-btn-hover-border-color: var(--mint-green);
   --bs-btn-hover-color: var(--main-color);
+  --bs-btn-active-bg: var(--main-color);
+  --bs-btn-active-border-color: var(--main-color);
 }
 .btn-outline-primary {
   --bs-btn-color: var(--main-color);
