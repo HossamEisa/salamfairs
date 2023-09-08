@@ -13,7 +13,6 @@ const minify = require('gulp-minify');
 function minifyCSS() {
   return gulp
     .src([
-      "./assets/css/bootstrap.rtl.min.css",
       "./assets/css/fontawesome.css",
       "./assets/css/swiper-bundle.min.css",
       "./assets/css/aos.css",
@@ -37,6 +36,7 @@ function minifyJS() {
       "./assets/js/bootstrap.bundle.min.js",
       "./assets/js/swiper-bundle.min.js",
       "./assets/js/aos.js",
+      "./assets/js/jquery.vide.min.js",
       "./assets/js/main.js",
     ])
     .pipe(terser())
