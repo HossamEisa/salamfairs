@@ -93,7 +93,7 @@
           <nav class="navbar navbar-expand-lg navbar-dark py-lg-0">
             <!-- Logo -->
             <a class="navbar-brand" href="/">
-              <span class="d-none">home page</span>
+              <h1 class="d-none">home page</h1>
               <img
                 src="./assets/img/logo.png"
                 alt="..."
@@ -141,7 +141,7 @@
                   </li>
                   <!-- To be hide in Desktop -->
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"
+                    <a class="nav-link active" aria-current="page" href="#"
                       >الرئيسية</a
                     >
                   </li>
@@ -172,9 +172,7 @@
                         >
                       </li>
                       <li>
-                        <a class="dropdown-item active" href="#"
-                          >المتاحف الموسمية</a
-                        >
+                        <a class="dropdown-item" href="#">المتاحف الموسمية</a>
                       </li>
                     </ul>
                   </li>
@@ -213,6 +211,7 @@
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      aria-label="القائمة"
                     >
                       <img
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAARVBMVEUASAAAPgAAMgAAIQAAEQAAAAB+sn51rHVnpGZcnVxTmFJKkUlAiz8wgS+bwJ240LmuzK+Lto0geiDP4NAYdBc3hjcQbhBEiKspAAAAX0lEQVR4AQXBWU7DUBRAMZ+bQS37XyhfKCKkDzuQSJQTEdG9M6hV6rHTUT9f1vWaPgZar9W0yFSzrW2ea133UOdG8vaMvvfoWHQvM8uo/s7z88z65dJ2SJK3y9UWAeAfx/YeOrcyZy0AAAAASUVORK5CYII="
@@ -222,6 +221,7 @@
                         style="width: 16px; height: 11px" /><span
                         role="application"
                         class="dropdown-menu-toggle ast-header-navigation-arrow"
+                        tabindex="0"
                         aria-expanded="false"
                         aria-label="القائمة"
                       ></span
@@ -233,6 +233,7 @@
                           hreflang="ar"
                           lang="ar"
                           class="dropdown-item"
+                          aria-label="العربية"
                           ><img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAARVBMVEUASAAAPgAAMgAAIQAAEQAAAAB+sn51rHVnpGZcnVxTmFJKkUlAiz8wgS+bwJ240LmuzK+Lto0geiDP4NAYdBc3hjcQbhBEiKspAAAAX0lEQVR4AQXBWU7DUBRAMZ+bQS37XyhfKCKkDzuQSJQTEdG9M6hV6rHTUT9f1vWaPgZar9W0yFSzrW2ea133UOdG8vaMvvfoWHQvM8uo/s7z88z65dJ2SJK3y9UWAeAfx/YeOrcyZy0AAAAASUVORK5CYII="
                             alt="العربية"
@@ -247,13 +248,15 @@
                           hreflang="en-GB"
                           lang="en-GB"
                           class="dropdown-item"
+                          aria-label="en"
                           ><img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAt1BMVEWSmb66z+18msdig8La3u+tYX9IaLc7W7BagbmcUW+kqMr/q6n+//+hsNv/lIr/jIGMnNLJyOP9/fyQttT/wb3/////aWn+YWF5kNT0oqz0i4ueqtIZNJjhvt/8gn//WVr/6+rN1+o9RKZwgcMPJpX/VFT9UEn+RUX8Ozv2Ly+FGzdYZrfU1e/8LS/lQkG/mbVUX60AE231hHtcdMb0mp3qYFTFwNu3w9prcqSURGNDaaIUMX5FNW5wYt7AAAAAjklEQVR4AR3HNUJEMQCGwf+L8RR36ajR+1+CEuvRdd8kK9MNAiRQNgJmVDAt1yM6kSzYVJUsPNssAk5N7ZFKjVNFAY4co6TAOI+kyQm+LFUEBEKKzuWUNB7rSH/rSnvOulOGk+QlXTBqMIrfYX4tSe2nP3iRa/KNK7uTmWJ5a9+erZ3d+18od4ytiZdvZyuKWy8o3UpTVAAAAABJRU5ErkJggg=="
                             alt="English"
                             width="16"
                             height="11"
                             style="width: 16px; height: 11px"
-                        /></a>
+                          />
+                        </a>
                       </li>
                       <li>
                         <a
@@ -261,6 +264,7 @@
                           hreflang="fr-FR"
                           lang="fr-FR"
                           class="dropdown-item"
+                          aria-label="Français"
                           ><img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAbFBMVEVzldTg4ODS0tLxDwDtAwDjAADD0uz39/fy8vL3k4nzgna4yOixwuXu7u7s6+zn5+fyd2rvcGPtZljYAABrjNCpvOHrWkxegsqfs93NAADpUUFRd8THAABBa7wnVbERRKa8vLyxsLCoqKigoKClCvcsAAAAXklEQVR4AS3JxUEAQQAEwZo13Mk/R9w5/7UERJCIGIgj5qfRJZEpPyNfCgJTjMR1eRRnJiExFJz5Mf1PokWr/UztIjRGQ3V486u0HO55m634U6dMcf0RNPfkVCTvKjO16xHA8miowAAAAABJRU5ErkJggg=="
                             alt="Français"
@@ -310,13 +314,22 @@
                   </ul>
                   <ul class="links--menu-social">
                     <li>
-                      <a href="tel:+966920008397" target="_blank">
+                      <a
+                        href="tel:+966920008397"
+                        aria-label="phone"
+                        target="_blank"
+                      >
                         <span class="d-none">Phone-alt</span>
                         <i class="fas fa-phone-alt"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://wa.me/966920008397" target="_blank">
+                      <a
+                        href="https://wa.me/966920008397"
+                        aria-label="Whatsapp"
+                        target="_blank"
+                        rel="noopener"
+                      >
                         <span class="d-none">Whatsapp</span>
                         <i class="fab fa-whatsapp"></i>
                       </a>
@@ -324,7 +337,9 @@
                     <li>
                       <a
                         href="https://twitter.com/salamforfairs"
+                        rel="noopener"
                         target="_blank"
+                        aria-label="Twitter"
                       >
                         <span class="d-none">Twitter</span>
                         <i class="fab fa-twitter"></i>
@@ -334,6 +349,8 @@
                       <a
                         href="https://www.youtube.com/channel/UCVbbijXeRE_lHj8VZ7WJQ_A"
                         target="_blank"
+                        rel="noopener"
+                        aria-label="Youtube"
                       >
                         <span class="d-none">Youtube</span>
                         <i class="fab fa-youtube"></i>
@@ -343,6 +360,8 @@
                       <a
                         href="https://instagram.com/salam_forfairs"
                         target="_blank"
+                        rel="noopener"
+                        aria-label="Instagram"
                       >
                         <span class="d-none">Instagram</span>
                         <i class="fab fa-instagram"></i>
@@ -357,8 +376,16 @@
 
             <!-- to show btn and togglle in mobile Only -->
             <form class="d-flex flex-wrap d-lg-none mobile-btn-control">
-              <a href="#" class="btn btn-outline-light btn-sm me-2"> المتجر </a>
-              <a href="#" class="btn btn-outline-light btn-sm"> احجز تذكرة </a>
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm me-2"
+                type="button"
+              >
+                المتجر
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm" type="button">
+                احجز تذكرة
+              </a>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -475,42 +502,42 @@
         </section>
         <!-- / Content Section  -->
 
-        <!-- share Section  -->
-        <section class="news-share-section">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-auto pe-5">
-                <h2 class="news-share-title">مشاركة الخبر</h2>
-              </div>
-              <div class="col-auto">
-                <div class="social-share">
-                  <button class="social_share" data-type="whatsapp">
-                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                  </button>
-                  <button class="social_share" data-type="twitter">
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                  </button>
-                  <button class="social_share" data-type="fb">
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                  </button>
-                  <button class="social_share" data-type="telegram">
-                    <i class="fab fa-telegram" aria-hidden="true"></i>
-                  </button>
-                  <button class="social_share" data-type="pinterest">
-                    <i class="fab fa-pinterest" aria-hidden="true"></i>
-                  </button>
-                  <button class="social_share" data-type="email">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                  </button>
-                  <button class="print" onclick="window.print()">
-                    <i class="fas fa-print" aria-hidden="true"></i>
-                  </button>
+          <!-- share Section  -->
+          <section class="news-share-section">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-auto pe-5">
+                  <h2 class="news-share-title">مشاركة الخبر</h2>
+                </div>
+                <div class="col-auto">
+                  <div class="social-share">
+                    <button aria-label="button" class="social_share" data-type="whatsapp">
+                      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </button>
+                    <button aria-label="button" class="social_share" data-type="twitter">
+                      <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </button>
+                    <button aria-label="button" class="social_share" data-type="fb">
+                      <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </button>
+                    <button aria-label="button" class="social_share" data-type="telegram">
+                      <i class="fab fa-telegram" aria-hidden="true"></i>
+                    </button>
+                    <button aria-label="button" class="social_share" data-type="pinterest">
+                      <i class="fab fa-pinterest" aria-hidden="true"></i>
+                    </button>
+                    <button aria-label="button" class="social_share" data-type="email">
+                      <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </button>
+                    <button aria-label="button" class="print" onclick="window.print()">
+                      <i class="fas fa-print" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <!-- / share Section  -->
+          </section>
+          <!-- / share Section  -->
 
         <!--  news navigation Section  -->
         <section class="news-navigation">
@@ -562,11 +589,11 @@
         </section>
         <!-- / news navigation Section  -->
 
+
         <!-- More News Section  -->
         <section>
           <div class="container">
             <h2 class="news-section-list-title">أخبار أخرى</h2>
-
             <div class="row">
               <div class="col-md-6 col-lg-4 mb-3">
                 <div class="card standard-with-image h-100">
@@ -574,7 +601,7 @@
                     <a
                       href="https://salamfairs.com.sa/5341/"
                       target="_self"
-                      aria-hidden="true"
+                      aria-label="image"
                     >
                       <img
                         src="https://i0.wp.com/salamfairs.com.sa/wp-content/uploads/2022/05/وزير-الأوقاف-والشؤون-الدينية-بإقليم-كردستان-العراق-بشتيوان-صادق-1.jpg?fit=768%2C512&amp;ssl=1"
@@ -613,6 +640,7 @@
                       href="https://salamfairs.com.sa/5341/"
                       target="_self"
                       class="btn btn-secondary"
+                      aria-label="readmore"
                       >اقرا المزيد ..</a
                     >
                   </div>
@@ -624,65 +652,7 @@
                     <a
                       href="https://salamfairs.com.sa/5341/"
                       target="_self"
-                      aria-hidden="true"
-                    >
-                      <img
-                        src="https://i0.wp.com/salamfairs.com.sa/wp-content/uploads/2022/11/الرئيس-الألباني-السابق-1.webp?fit=768%2C512&amp;ssl=1"
-                        alt="رئيس جمهورية ألبانيا السابق"
-                        width="768"
-                        height="512"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <h2 class="card-title">
-                      <a href="/">
-                        وزير الأوقاف والشؤون الدينية بإقليم كردستان العراق في
-                        زيارة للمعرض والمتحف الدولي
-                      </a>
-                    </h2>
-                    <div class="card-list">
-                      <!-- Card List Link -->
-                      <div class="card-list-link">
-                        <i class="fas fa-calendar-week"></i>
-                        <span>فبراير 20, 2023</span>
-                      </div>
-                      <!-- Card List Link -->
-                      <div class="card-list-link">
-                        <i class="fa fa-user fa-fw" aria-hidden="true"></i>
-                        <a
-                          href="https://salamfairs.com.sa/author/mohammedsofi/"
-                          title="مقالات المركز الإعلامي"
-                          rel="author"
-                          >المركز الإعلامي</a
-                        >
-                      </div>
-                    </div>
-                    <p class="card-text">
-                      المعرض والمتحف الدولي للسيرة النبوية والحضارة الإسلامية
-                      تحت إشراف رابطة العالم الإسلامي والمشارك بمؤتمر معرض
-                      وخدمات الحج والعمرة اكسبو الحج ٢٠٢٣ بجدة بإشراف وزارة الحج
-                      والعمرة نبذة عن المعرضالمتحف الدولي
-                    </p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://salamfairs.com.sa/5341/"
-                      target="_self"
-                      class="btn btn-secondary"
-                      >اقرا المزيد ..</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 mb-3">
-                <div class="card standard-with-image h-100">
-                  <div class="card-image">
-                    <a
-                      href="https://salamfairs.com.sa/5341/"
-                      target="_self"
-                      aria-hidden="true"
+                      aria-label="image"
                     >
                       <img
                         src="https://i0.wp.com/salamfairs.com.sa/wp-content/uploads/2022/05/وزير-الأوقاف-والشؤون-الدينية-بإقليم-كردستان-العراق-بشتيوان-صادق-1.jpg?fit=768%2C512&amp;ssl=1"
@@ -721,76 +691,19 @@
                       href="https://salamfairs.com.sa/5341/"
                       target="_self"
                       class="btn btn-secondary"
+                      aria-label="readmore"
                       >اقرا المزيد ..</a
                     >
                   </div>
                 </div>
-              </div>
+              </div> 
               <div class="col-md-6 col-lg-4 mb-3">
                 <div class="card standard-with-image h-100">
                   <div class="card-image">
                     <a
                       href="https://salamfairs.com.sa/5341/"
                       target="_self"
-                      aria-hidden="true"
-                    >
-                      <img
-                        src="https://i0.wp.com/salamfairs.com.sa/wp-content/uploads/2022/11/الرئيس-الألباني-السابق-1.webp?fit=768%2C512&amp;ssl=1"
-                        alt="رئيس جمهورية ألبانيا السابق"
-                        width="768"
-                        height="512"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <h2 class="card-title">
-                      <a href="/">
-                        وزير الأوقاف والشؤون الدينية بإقليم كردستان العراق في
-                        زيارة للمعرض والمتحف الدولي
-                      </a>
-                    </h2>
-                    <div class="card-list">
-                      <!-- Card List Link -->
-                      <div class="card-list-link">
-                        <i class="fas fa-calendar-week"></i>
-                        <span>فبراير 20, 2023</span>
-                      </div>
-                      <!-- Card List Link -->
-                      <div class="card-list-link">
-                        <i class="fa fa-user fa-fw" aria-hidden="true"></i>
-                        <a
-                          href="https://salamfairs.com.sa/author/mohammedsofi/"
-                          title="مقالات المركز الإعلامي"
-                          rel="author"
-                          >المركز الإعلامي</a
-                        >
-                      </div>
-                    </div>
-                    <p class="card-text">
-                      المعرض والمتحف الدولي للسيرة النبوية والحضارة الإسلامية
-                      تحت إشراف رابطة العالم الإسلامي والمشارك بمؤتمر معرض
-                      وخدمات الحج والعمرة اكسبو الحج ٢٠٢٣ بجدة بإشراف وزارة الحج
-                      والعمرة نبذة عن المعرضالمتحف الدولي
-                    </p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://salamfairs.com.sa/5341/"
-                      target="_self"
-                      class="btn btn-secondary"
-                      >اقرا المزيد ..</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 mb-3">
-                <div class="card standard-with-image h-100">
-                  <div class="card-image">
-                    <a
-                      href="https://salamfairs.com.sa/5341/"
-                      target="_self"
-                      aria-hidden="true"
+                      aria-label="image"
                     >
                       <img
                         src="https://i0.wp.com/salamfairs.com.sa/wp-content/uploads/2022/05/وزير-الأوقاف-والشؤون-الدينية-بإقليم-كردستان-العراق-بشتيوان-صادق-1.jpg?fit=768%2C512&amp;ssl=1"
@@ -829,64 +742,7 @@
                       href="https://salamfairs.com.sa/5341/"
                       target="_self"
                       class="btn btn-secondary"
-                      >اقرا المزيد ..</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 mb-3">
-                <div class="card standard-with-image h-100">
-                  <div class="card-image">
-                    <a
-                      href="https://salamfairs.com.sa/5341/"
-                      target="_self"
-                      aria-hidden="true"
-                    >
-                      <img
-                        src="https://i0.wp.com/salamfairs.com.sa/wp-content/uploads/2022/11/الرئيس-الألباني-السابق-1.webp?fit=768%2C512&amp;ssl=1"
-                        alt="رئيس جمهورية ألبانيا السابق"
-                        width="768"
-                        height="512"
-                        loading="lazy"
-                      />
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <h2 class="card-title">
-                      <a href="/">
-                        وزير الأوقاف والشؤون الدينية بإقليم كردستان العراق في
-                        زيارة للمعرض والمتحف الدولي
-                      </a>
-                    </h2>
-                    <div class="card-list">
-                      <!-- Card List Link -->
-                      <div class="card-list-link">
-                        <i class="fas fa-calendar-week"></i>
-                        <span>فبراير 20, 2023</span>
-                      </div>
-                      <!-- Card List Link -->
-                      <div class="card-list-link">
-                        <i class="fa fa-user fa-fw" aria-hidden="true"></i>
-                        <a
-                          href="https://salamfairs.com.sa/author/mohammedsofi/"
-                          title="مقالات المركز الإعلامي"
-                          rel="author"
-                          >المركز الإعلامي</a
-                        >
-                      </div>
-                    </div>
-                    <p class="card-text">
-                      المعرض والمتحف الدولي للسيرة النبوية والحضارة الإسلامية
-                      تحت إشراف رابطة العالم الإسلامي والمشارك بمؤتمر معرض
-                      وخدمات الحج والعمرة اكسبو الحج ٢٠٢٣ بجدة بإشراف وزارة الحج
-                      والعمرة نبذة عن المعرضالمتحف الدولي
-                    </p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://salamfairs.com.sa/5341/"
-                      target="_self"
-                      class="btn btn-secondary"
+                      aria-label="readmore"
                       >اقرا المزيد ..</a
                     >
                   </div>
@@ -939,13 +795,22 @@
                     <div class="order-1 order-sm-2 col-xl mb-3 mb-lg-2 mb-xl-0">
                       <ul class="links--menu-social">
                         <li>
-                          <a href="tel:+966920008397" target="_blank">
+                          <a
+                            href="tel:+966920008397"
+                            target="_blank"
+                            aria-label="phone"
+                          >
                             <span class="d-none">Phone-alt</span>
                             <i class="fas fa-phone-alt"></i>
                           </a>
                         </li>
                         <li>
-                          <a href="https://wa.me/966920008397" target="_blank">
+                          <a
+                            href="https://wa.me/966920008397"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Whatsapp"
+                          >
                             <span class="d-none">Whatsapp</span>
                             <i class="fab fa-whatsapp"></i>
                           </a>
@@ -953,7 +818,9 @@
                         <li>
                           <a
                             href="https://twitter.com/salamforfairs"
+                            rel="noopener"
                             target="_blank"
+                            aria-label="Twitter"
                           >
                             <span class="d-none">Twitter</span>
                             <i class="fab fa-twitter"></i>
@@ -962,7 +829,9 @@
                         <li>
                           <a
                             href="https://www.youtube.com/channel/UCVbbijXeRE_lHj8VZ7WJQ_A"
+                            rel="noopener"
                             target="_blank"
+                            aria-label="youtube"
                           >
                             <span class="d-none">Youtube</span>
                             <i class="fab fa-youtube"></i>
@@ -971,7 +840,9 @@
                         <li>
                           <a
                             href="https://instagram.com/salam_forfairs"
+                            rel="noopener"
                             target="_blank"
+                            aria-label="Instagram"
                           >
                             <span class="d-none">Instagram</span>
                             <i class="fab fa-instagram"></i>
