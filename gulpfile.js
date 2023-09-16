@@ -53,7 +53,7 @@ function minifyJS() {
       "./assets/js/bootstrap.bundle.min.js",
       "./assets/js/swiper-bundle.min.js",
       "./assets/js/aos.js",
-      "./assets/js/jquery.vide.min.js",
+      // "./assets/js/jquery.vide.min.js",
       "./assets/js/main.js",
     ])
     .pipe(terser())

@@ -288,7 +288,7 @@
                   <a href="#" class="btn btn-outline-light btn-sm me-2">
                     المتجر
                   </a>
-                  <a href="#" class="btn btn-outline-light btn-sm">
+                  <a href="#bookTicket" class="btn btn-outline-light btn-sm">
                     احجز تذكرة
                   </a>
                 </form>
@@ -411,11 +411,29 @@
       <main>
         <!-- Start Home Section -->
         <section class="hero-section">
+          <!--
           <div
             class="swiper-slide"
             data-vide-bg="mp4: ./assets/video/salamfairs.mp4, poster: ./assets/video/storm-1.png"
             data-vide-options="posterType: png, loop: false, muted: true, position: 0% 0%"
           ></div>
+          -->
+          <div class="swiper-slide">
+            <video
+            class="jquery-background-video"
+            autoplay
+            muted
+            loop
+            poster="./assets/video/storm-1.png"
+            playsinline 
+          >
+            <source
+              src="./assets/video/salamfairs.mp4"
+              type="video/mp4"
+            />
+          </video>
+          </div>
+
           <div class="hero-overlay"></div>
           <div class="hero-shape">
             <svg
@@ -455,7 +473,7 @@
         </section>
         <!-- End Home Section -->
 
-        <section class="international-museums overflow-hidden">
+        <section class="international-museums overflow-hidden" id="bookTicket">
           <div class="container">
             <h2 class="international-museums-title">
               المتاحف الدولية للسيرة النبوية
@@ -1148,7 +1166,6 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/aos.js"></script>
-    <script src="assets/js/jquery.vide.min.js"></script>
     <script src="assets/js/main.js"></script>
     -->
 
