@@ -9,9 +9,9 @@
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   background-attachment: fixed;
   position: relative;
-  padding: 80px 0 40px;
+  padding: 80px 0 0px;
   @include mq("lg") {
-    padding: 120px 0 50px;
+    padding: 120px 0 0px;
   }
   &::after {
     content: "";
@@ -34,7 +34,7 @@
   }
 
   &-box {
-    background-color: rgb(235 232 232);
+    background-color: #FFFFFFF0;
     text-align: center;
     padding: 10px 10px 10px 10px;
     min-height: 255px;
@@ -85,7 +85,7 @@
 }
 
 .targests-block {
-  background-color: rgb(235 232 232);
+  background-color: #FFFFFFF0;
   &-icon {
     font-size: 50px;
     color: var(--mint-green);
@@ -134,7 +134,7 @@
 }
 
 .about-ul-container {
-  background-color: rgb(235 232 232);
+  background-color: #FFFFFFF0;
   padding: 15px;
   @include mq("xl") {
     padding: 0 10px;
@@ -168,7 +168,15 @@
     font-size: 16px;
     color: #54595f;
     padding-#{$right}: 5px;
-    margin-top: 5px;
+    margin-top: 8px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+   span {
+    &:first-child {
+      margin-inline-end: 5px;
+    }
+   }
   }
 }
 
@@ -178,7 +186,7 @@
 
 .about-international-museums {
   @include mq("lg") {
-    background-color: rgb(235 232 232);
+    background-color: #FFFFFFF0;
   }
   &-icon {
     font-size: 50px;
@@ -214,7 +222,7 @@
     }
   }
   &-box {
-    background-color: rgb(235 232 232);
+    background-color: #FFFFFFF0;
     padding: 15px;
     @include mq("lg") {
       background-color: transparent;
