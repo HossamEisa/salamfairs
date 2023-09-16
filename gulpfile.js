@@ -10,9 +10,10 @@ const minify = require('gulp-minify');
   //concat files
   (concat = require("gulp-concat"));
 // Minify CSS to Build
-function minifyCSS() {
+function minifyCSSRTL() {
   return gulp
     .src([
+      "./assets/css/bootstrap.rtl.min.css",
       "./assets/css/fontawesome.css",
       "./assets/css/swiper-bundle.min.css",
       "./assets/css/aos.css",
@@ -24,6 +25,24 @@ function minifyCSS() {
       })
     )
     .pipe(concat("main.min.css"))
+    .pipe(minify())
+    .pipe(gulp.dest("./assets/css/"));
+}
+function minifyCSSLTR() {
+  return gulp
+    .src([
+      "./assets/css/bootstrap.min.css",
+      "./assets/css/fontawesome.css",
+      "./assets/css/swiper-bundle.min.css",
+      "./assets/css/aos.css",
+      "./assets/css/style-ltr.min.css",
+    ])
+    .pipe(
+      cleanCSS({
+        compatibility: "ie8",
+      })
+    )
+    .pipe(concat("main.ltr.min.css"))
     .pipe(minify())
     .pipe(gulp.dest("./assets/css/"));
 }
@@ -45,4 +64,4 @@ function minifyJS() {
 }
 
 exports.build = build;
-exports.default = series(minifyJS, minifyCSS);
+exports.default = series(minifyJS, minifyCSSRTL, minifyCSSLTR);
