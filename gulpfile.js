@@ -13,7 +13,6 @@ const minify = require('gulp-minify');
 function minifyCSSRTL() {
   return gulp
     .src([
-      "./assets/css/bootstrap.rtl.min.css",
       "./assets/css/fontawesome.css",
       "./assets/css/swiper-bundle.min.css",
       "./assets/css/aos.css",
@@ -31,7 +30,6 @@ function minifyCSSRTL() {
 function minifyCSSLTR() {
   return gulp
     .src([
-      "./assets/css/bootstrap.min.css",
       "./assets/css/fontawesome.css",
       "./assets/css/swiper-bundle.min.css",
       "./assets/css/aos.css",
