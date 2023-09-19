@@ -78,8 +78,8 @@
       content="https://i0.wp.com/salamfairs.com.sa/wp-content/uploads/2022/03/cropped-favicon.png?fit=270%2C270&#038;ssl=1"
     />
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
     <!--
+      <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="./assets/css/fontawesome.css" />
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/aos.css" />
@@ -288,7 +288,7 @@
                   <a href="#" class="btn btn-outline-light btn-sm me-2">
                     المتجر
                   </a>
-                  <a href="#bookTicket" class="btn btn-outline-light btn-sm">
+                  <a href="#bookTicket" class="btn btn-outline-light btn-sm" id="scrollToBookTicket">
                     احجز تذكرة
                   </a>
                 </form>
@@ -420,18 +420,15 @@
           -->
           <div class="swiper-slide">
             <video
-            class="jquery-background-video"
-            autoplay
-            muted
-            loop
-            poster="./assets/video/storm-1.png"
-            playsinline 
-          >
-            <source
-              src="./assets/video/salamfairs.mp4"
-              type="video/mp4"
-            />
-          </video>
+              class="jquery-background-video"
+              autoplay
+              muted
+              loop
+              poster="./assets/video/storm-1.png"
+              playsinline
+            >
+              <source src="./assets/video/salamfairs.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div class="hero-overlay"></div>
@@ -1170,5 +1167,13 @@
     -->
 
     <script src="assets/js/main.min.js"></script>
+    <script>
+      $('#scrollToBookTicket').click(function (e) {
+        $("html, body").animate({
+          scrollTop: $($.attr(this, "href")).offset().top,
+        });
+        return false;
+      });
+    </script>
   </body>
 </html>

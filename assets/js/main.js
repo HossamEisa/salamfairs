@@ -32,6 +32,8 @@ if ($("div[data-aos]").length) {
 if ($(".hero-section-carousel").length) {
   // Init HomePage Latest News Carosuel
   var heroCarousel = new Swiper(".hero-section-carousel ", {
+    passiveListeners: false,
+
     speed: 800,
     autoplay: {
       delay: 15000,
@@ -46,6 +48,8 @@ if ($(".hero-section-carousel").length) {
 if ($(".latest-news-carousel").length) {
   // Init HomePage Latest News Carosuel
   var latestNewsCarousel = new Swiper(".latest-news-carousel ", {
+    passiveListeners: false,
+
     effect: "cube",
     speed: 800,
     autoplay: {
@@ -71,6 +75,8 @@ if ($(".latest-news-carousel").length) {
 if ($(".abeer-carousel").length) {
   // Init HomePage Latest News Carosuel
   var abeerCarousel = new Swiper(".abeer-carousel ", {
+    passiveListeners: false,
+
     speed: 800,
     autoplay: {
       delay: 5000,
@@ -89,6 +95,8 @@ if ($(".abeer-carousel").length) {
 if ($(".international-museums-carousel").length) {
   // Init HomePage international-museums-item  Carosuel
   var internationalCarosuel = new Swiper(".international-museums-carousel ", {
+    passiveListeners: false,
+
     speed: 800,
     autoplay: {
       delay: 5000,
@@ -104,6 +112,8 @@ if ($(".international-museums-carousel").length) {
 if ($(".news-details-carousel").length) {
   // Init News Details Page  Carosuel
   var newsDetailsCarousel = new Swiper(".news-details-carousel", {
+    passiveListeners: false,
+
     speed: 800,
     autoplay: {
       delay: 5000,
@@ -124,6 +134,8 @@ if ($(".news-details-carousel").length) {
 if ($(".meusemSwiper").length) {
   // Init News Details Page  Carosuel
   var meusemSwiper = new Swiper(".meusemSwiper", {
+    passiveListeners: false,
+
     speed: 800,
     autoplay: {
       delay: 5000,
@@ -142,6 +154,8 @@ if ($(".meusemSwiper").length) {
 if ($(".gallery-carousel").length) {
   // Init gallery-carousel   Carosuel
   var galleryCarousel = new Swiper(".gallery-carousel", {
+    passiveListeners: false,
+
     speed: 800,
     slidesPerView: 1,
     spaceBetween: 20,
@@ -170,6 +184,7 @@ if ($(".gallery-carousel").length) {
 if ($(".gallery-carousel-madina").length) {
   // Init gallery-carousel   Carosuel
   var galleryCarouselMadina = new Swiper(".gallery-carousel-madina", {
+    passiveListeners: false,
     speed: 800,
     slidesPerView: 1,
     spaceBetween: 20,
@@ -207,5 +222,8 @@ if ($(".targets-carousel").length) {
       nextEl: ".targets-carousel .swiper-button-next",
       prevEl: ".targets-carousel .swiper-button-prev",
     },
+    passiveListeners: false,
   });
 }
+
+
