@@ -28,8 +28,6 @@
         }
       }
     }
- 
-
   }
 
   .dropdown-toggle {
@@ -234,6 +232,19 @@
           @include mq("xl") {
             padding: 13px 20px;
           }
+          // @at-root [dir="ltr"] & {
+
+          @at-root [lang="en"] & {
+            @include mq("xl") {
+              padding: 13px 10px!important;
+            }
+          }
+          @at-root [lang="fr"] & {
+            @include mq("xl") {
+              padding: 13px 5px!important;
+              font-size: 0.7rem;
+            }
+          }
           &::before {
             content: "";
             height: 3px;
@@ -308,6 +319,11 @@
         text-decoration: none;
         text-align: center;
         color: #4b4f58;
+        @at-root [lang="fr"] & {
+          @include mq("xl") {
+            font-size: calcRem(14);
+          }
+        }
 
         &:focus,
         &:hover {
