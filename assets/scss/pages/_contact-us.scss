@@ -78,7 +78,6 @@
     border-radius: 25px;
     box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
     font-size: calcRem(14);
-    font-family: $bukra-r;
     @include mq("lg") {
       font-size: calcRem(12);
     }
