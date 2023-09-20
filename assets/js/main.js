@@ -22,7 +22,7 @@ window.onscroll = function () {
   changeHeaderStyle();
 };
 
-if ($("div[data-aos]").length) {
+if ($("[data-aos]").length) {
   AOS.init({
     disable: "mobile",
     once: true,
