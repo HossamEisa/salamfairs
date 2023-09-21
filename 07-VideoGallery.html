@@ -889,12 +889,27 @@
     <!-- Swiper JS -->
     <!-- Main JavaScript -->
     <script src="./assets/js/main.js"></script>
+
     <script>
+   
       $(function () {
         $(".video-gallery-playlist-item").on("click", function (e) {
           e.preventDefault();
+          function controlVideo(vidFunc) {
+        let items = document.querySelectorAll("iframe");
+        items.forEach((element) => {
+          element.contentWindow.postMessage(
+            '{"event":"command","func":"' + vidFunc + '","args":""}',
+            "*"
+          );
+        });
+      }
           let youtubeId = $(this).data("youtube-id");
-        
+          controlVideo("stopVideo");
+          $('iframe').addClass('stoped');
+          $(this)
+            .closest(".video-section")
+            .find("iframe").removeClass('stoped')
           $(this)
             .closest(".video-section")
             .find("iframe")
@@ -902,6 +917,13 @@
               "src",
               `https://youtube.com/embed/${youtubeId}?autoplay=1&rel=0&showinfo=0&autohide=`
             );
+          //   $(".stoped").each(function () {
+          //   this.contentWindow.postMessage(
+          //     '{"event":"command","func":"stopVideo","args":""}',
+          //     "*"
+          //   );
+          // });
+          
         });
       }); //end of document ready
     </script>

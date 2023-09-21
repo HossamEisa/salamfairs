@@ -567,7 +567,6 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $("#flip-book-box").flipBook({
-          pdfUrl: "pdfviewer/pdf/book.pdf",
           rightToLeft: true,
           viewMode: "3d",
           pageDrag: true,
@@ -596,7 +595,11 @@
           currentPageMarginH: "5",
           touchSwipeEnabled: true,
           rightClickEnabled: true,
-
+          singlePageMode: false,
+          pages: [
+        {src: "./assets/img/invitation-ksa.webp", thumb: "./assets/img/aj1.jpg", json: "1.json"},
+        {src: "./assets/img/invitation.webp", thumb: "./assets/img/aj1.jpg", json: "2.json"},
+    ],
           btnFirst: {
             enabled: false,
             title: "First page",
