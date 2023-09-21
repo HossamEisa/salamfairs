@@ -14,6 +14,7 @@ function minifyCSSRTL() {
   return gulp
     .src([
       "./assets/css/bootstrap.rtl.min.css",
+      "./assets/css/flag-icons.min.css",
       "./assets/css/fontawesome.css",
       "./assets/css/swiper-bundle.min.css",
       "./assets/css/aos.css",
@@ -32,6 +33,7 @@ function minifyCSSLTR() {
   return gulp
     .src([
       "./assets/css/bootstrap.min.css",
+      "./assets/css/flag-icons.min.css",
       "./assets/css/fontawesome.css",
       "./assets/css/swiper-bundle.min.css",
       "./assets/css/aos.css",
