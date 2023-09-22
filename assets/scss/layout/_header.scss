@@ -1,12 +1,11 @@
 .header {
-  transition: background 0.3s;
   background-color: rgba(12, 14, 13, 0.25);
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 10;
-  transition: 0.5s ease-in-out;
+  // transition: 0.5s ease-in-out;
   position: fixed;
   &.fixed {
     background-color: rgb(12, 14, 13);
@@ -134,7 +133,6 @@
         .nav-link {
           color: #494c4f;
           padding: 10px;
-          font-family: $font-b;
           font-size: 16px;
           font-weight: 500;
           font-family: $font-b;
@@ -222,9 +220,9 @@
           font-size: calcRem(18);
           line-height: calcRem(20);
           color: var(--white);
-          -webkit-transition: 0.4s;
-          -o-transition: 0.4s;
-          transition: 0.4s;
+          // -webkit-transition: 0.4s;
+          // -o-transition: 0.4s;
+          // transition: 0.4s;
           position: relative;
           text-decoration: none;
           padding: 13px 10px;
