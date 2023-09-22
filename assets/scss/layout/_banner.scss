@@ -26,7 +26,6 @@
     @include mq("lg") {
       font-size: calcRem(46);
       line-height: calcRem(64);
-      margin-top: 30px;
     }
   }
   &-subtitle {

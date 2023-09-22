@@ -288,7 +288,7 @@
                   <a href="#" class="btn btn-outline-light btn-sm me-2">
                     المتجر
                   </a>
-                  <a href="#bookTicket" class="btn btn-outline-light btn-sm" id="scrollToBookTicket">
+                  <a href="#bookTicket" class="btn btn-outline-light btn-sm scrollToBookTicket">
                     احجز تذكرة
                   </a>
                 </form>
@@ -1168,7 +1168,7 @@
 
     <script src="assets/js/main.min.js"></script>
     <script>
-      $('#scrollToBookTicket').click(function (e) {
+      $('.scrollToBookTicket').click(function (e) {
         $("html, body").animate({
           scrollTop: $($.attr(this, "href")).offset().top,
         });

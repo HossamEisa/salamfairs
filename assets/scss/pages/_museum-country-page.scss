@@ -279,9 +279,21 @@
 }
 .museums-invite {
   padding: 20px 0;
+  @at-root [dir="ltr"] & {
+     > .row {
+      flex-direction: row-reverse;
+      >div:first-child{
+        margin-left: 16.66666667%;
+      }
+      >div:last-child{
+        margin-left: 0!important;
+      }
+    }
+  }
   &-title {
-    font-size: calcRem(50);
+    font-size: calcRem(100);
     color: var(--main-color);
+    font-family: $font-b;
     font-weight: 600;
     border: 0;
     border-bottom: 10px solid;
