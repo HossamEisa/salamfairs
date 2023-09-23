@@ -26,6 +26,7 @@
     @include mq("lg") {
       font-size: calcRem(46);
       line-height: calcRem(64);
+      max-width: 58.083%;
     }
   }
   &-subtitle {
@@ -36,7 +37,7 @@
     font-weight: 600;
     @include mq("lg") {
       margin-top: 20px;
-      max-width: 54%;
+      max-width: 58.083%;
     }
   }
   &-subhead {
